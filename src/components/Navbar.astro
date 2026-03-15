@@ -1,0 +1,83 @@
+---
+---
+
+<nav
+  class="fixed top-0 left-0 right-0 z-50 border-b border-kobi-border bg-kobi-bg/80 backdrop-blur-lg"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-2xl font-bold text-white"
+        >Kobi <span class="text-emerald-500">কবি</span></span
+      >
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="#features" class="text-kobi-muted transition hover:text-white"
+        >Features</a
+      >
+      <a href="#pricing" class="text-kobi-muted transition hover:text-white"
+        >Pricing</a
+      >
+      <a href="#download" class="text-kobi-muted transition hover:text-white"
+        >Download</a
+      >
+      <a
+        href="https://app.kobidev.com/signup"
+        class="rounded-lg bg-emerald-500 px-5 py-2 font-semibold text-black transition hover:bg-emerald-400"
+      >
+        Get started free
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobile-menu-btn"
+      class="text-white md:hidden"
+      aria-label="Toggle menu"
+    >
+      <svg
+        class="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-kobi-border px-4 pb-4 md:hidden"
+  >
+    <a href="#features" class="block py-2 text-kobi-muted hover:text-white"
+      >Features</a
+    >
+    <a href="#pricing" class="block py-2 text-kobi-muted hover:text-white"
+      >Pricing</a
+    >
+    <a href="#download" class="block py-2 text-kobi-muted hover:text-white"
+      >Download</a
+    >
+    <a
+      href="https://app.kobidev.com/signup"
+      class="mt-2 block rounded-lg bg-emerald-500 px-5 py-2 text-center font-semibold text-black"
+    >
+      Get started free
+    </a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    btn?.addEventListener("click", () => {
+      menu?.classList.toggle("hidden");
+    });
+  </script>
+</nav>
