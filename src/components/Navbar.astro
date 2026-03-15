@@ -13,42 +13,64 @@
 
     <!-- Desktop nav -->
     <div class="hidden items-center gap-8 md:flex">
-      <a href="#features" class="text-kobi-muted transition hover:text-white"
+      <a href="#features" class="text-kobi-muted transition hover:text-white" data-i18n="nav.features"
         >Features</a
       >
-      <a href="#pricing" class="text-kobi-muted transition hover:text-white"
+      <a href="#pricing" class="text-kobi-muted transition hover:text-white" data-i18n="nav.pricing"
         >Pricing</a
       >
-      <a href="#download" class="text-kobi-muted transition hover:text-white"
+      <a href="#download" class="text-kobi-muted transition hover:text-white" data-i18n="nav.download"
         >Download</a
       >
+
+      <!-- Language toggle -->
+      <button
+        id="lang-toggle"
+        class="flex items-center gap-1.5 rounded-lg border border-kobi-border px-3 py-1.5 text-sm text-kobi-muted transition hover:border-kobi-muted hover:text-white"
+        aria-label="Switch language"
+      >
+        <span id="lang-label">বাং</span>
+      </button>
+
       <a
         href="https://app.kobidev.com/signup"
         class="rounded-lg bg-emerald-500 px-5 py-2 font-semibold text-black transition hover:bg-emerald-400"
+        data-i18n="nav.cta"
       >
         Get started free
       </a>
     </div>
 
     <!-- Mobile menu button -->
-    <button
-      id="mobile-menu-btn"
-      class="text-white md:hidden"
-      aria-label="Toggle menu"
-    >
-      <svg
-        class="h-6 w-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+    <div class="flex items-center gap-3 md:hidden">
+      <!-- Mobile language toggle -->
+      <button
+        id="lang-toggle-mobile"
+        class="rounded-lg border border-kobi-border px-2.5 py-1.5 text-sm text-kobi-muted transition hover:border-kobi-muted hover:text-white"
+        aria-label="Switch language"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
+        <span id="lang-label-mobile">বাং</span>
+      </button>
+
+      <button
+        id="mobile-menu-btn"
+        class="text-white"
+        aria-label="Toggle menu"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
   </div>
 
   <!-- Mobile menu -->
@@ -56,18 +78,19 @@
     id="mobile-menu"
     class="hidden border-t border-kobi-border px-4 pb-4 md:hidden"
   >
-    <a href="#features" class="block py-2 text-kobi-muted hover:text-white"
+    <a href="#features" class="block py-2 text-kobi-muted hover:text-white" data-i18n="nav.features"
       >Features</a
     >
-    <a href="#pricing" class="block py-2 text-kobi-muted hover:text-white"
+    <a href="#pricing" class="block py-2 text-kobi-muted hover:text-white" data-i18n="nav.pricing"
       >Pricing</a
     >
-    <a href="#download" class="block py-2 text-kobi-muted hover:text-white"
+    <a href="#download" class="block py-2 text-kobi-muted hover:text-white" data-i18n="nav.download"
       >Download</a
     >
     <a
       href="https://app.kobidev.com/signup"
       class="mt-2 block rounded-lg bg-emerald-500 px-5 py-2 text-center font-semibold text-black"
+      data-i18n="nav.cta"
     >
       Get started free
     </a>

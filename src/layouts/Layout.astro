@@ -1,4 +1,6 @@
 ---
+import { translations } from "../i18n";
+
 interface Props {
   title: string;
   description?: string;
@@ -100,6 +102,100 @@ const {
       document.querySelectorAll(".fade-in").forEach((el) => {
         observer.observe(el);
       });
+    </script>
+
+    <!-- i18n language toggle script -->
+    <script define:vars={{ translationsJson: JSON.stringify(translations) }}>
+      (function () {
+        const translations = JSON.parse(translationsJson);
+        const STORAGE_KEY = "kobi-lang";
+
+        function getLang() {
+          return localStorage.getItem(STORAGE_KEY) || "en";
+        }
+
+        function setLang(lang) {
+          localStorage.setItem(STORAGE_KEY, lang);
+        }
+
+        function applyTranslations(lang) {
+          const t = translations[lang];
+          if (!t) return;
+
+          document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            if (key && t[key] !== undefined) {
+              el.textContent = t[key];
+            }
+          });
+
+          // Update html lang attribute
+          document.documentElement.lang = lang === "bn" ? "bn" : "en";
+
+          // Update toggle button labels — show the OTHER language as the label
+          const labelText = lang === "bn" ? "EN" : "বাং";
+          const labelEl = document.getElementById("lang-label");
+          const labelMobileEl = document.getElementById("lang-label-mobile");
+          if (labelEl) labelEl.textContent = labelText;
+          if (labelMobileEl) labelMobileEl.textContent = labelText;
+        }
+
+        function toggleLang() {
+          const current = getLang();
+          const next = current === "en" ? "bn" : "en";
+          setLang(next);
+          applyTranslations(next);
+        }
+
+        // Apply saved language on page load
+        const savedLang = getLang();
+        if (savedLang !== "en") {
+          applyTranslations(savedLang);
+        }
+
+        // Bind toggle buttons
+        const toggleBtn = document.getElementById("lang-toggle");
+        const toggleBtnMobile = document.getElementById("lang-toggle-mobile");
+        if (toggleBtn) toggleBtn.addEventListener("click", toggleLang);
+        if (toggleBtnMobile) toggleBtnMobile.addEventListener("click", toggleLang);
+
+        // MutationObserver: re-apply translations when React adds new elements with data-i18n
+        // (e.g., CodeAnimation re-renders "Kobi is suggesting..." on each animation cycle)
+        const mutationObserver = new MutationObserver((mutations) => {
+          const lang = getLang();
+          if (lang === "en") return; // English is the default, no need to translate
+          const t = translations[lang];
+          if (!t) return;
+
+          for (const mutation of mutations) {
+            for (const node of mutation.addedNodes) {
+              if (node.nodeType !== Node.ELEMENT_NODE) continue;
+              const el = node;
+              // Check the added node itself
+              if (el.hasAttribute && el.hasAttribute("data-i18n")) {
+                const key = el.getAttribute("data-i18n");
+                if (key && t[key] !== undefined) {
+                  el.textContent = t[key];
+                }
+              }
+              // Check descendants
+              if (el.querySelectorAll) {
+                el.querySelectorAll("[data-i18n]").forEach((child) => {
+                  const key = child.getAttribute("data-i18n");
+                  if (key && t[key] !== undefined) {
+                    child.textContent = t[key];
+                  }
+                });
+              }
+            }
+          }
+        });
+
+        mutationObserver.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
     </script>
   </body>
 </html>

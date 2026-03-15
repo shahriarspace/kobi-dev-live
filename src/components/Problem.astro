@@ -1,49 +1,35 @@
 ---
-const painPoints = [
-  {
-    icon: "🚫",
-    title: "No international card",
-    description:
-      "Most Bangladeshi developers don't have a Visa/Mastercard that works internationally. GitHub Copilot requires one.",
-  },
-  {
-    icon: "💸",
-    title: "$10 = ৳1,100/month",
-    description:
-      "That's expensive for junior devs and students in Bangladesh. Kobi starts at ৳500 — less than half the cost.",
-  },
-  {
-    icon: "🤷",
-    title: "No local support",
-    description:
-      "When things break, you're on your own. Kobi is built for BD developers with local support and BDT billing.",
-  },
-];
 ---
 
 <section class="py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-4">
     <div class="fade-in mb-16 text-center">
       <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">
-        GitHub Copilot costs $10/month.<br />
-        <span class="text-kobi-muted">In USD.</span>
+        <span data-i18n="problem.title.1">GitHub Copilot costs $10/month.</span><br />
+        <span class="text-kobi-muted" data-i18n="problem.title.2">In USD.</span>
       </h2>
-      <p class="mx-auto max-w-2xl text-lg text-kobi-muted">
+      <p class="mx-auto max-w-2xl text-lg text-kobi-muted" data-i18n="problem.subtitle">
         For most Bangladeshi developers, that's not just expensive — it's
         inaccessible.
       </p>
     </div>
 
     <div class="grid gap-6 md:grid-cols-3">
-      {
-        painPoints.map((point) => (
-          <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
-            <div class="mb-4 text-4xl">{point.icon}</div>
-            <h3 class="mb-2 text-xl font-semibold text-white">{point.title}</h3>
-            <p class="leading-relaxed text-kobi-muted">{point.description}</p>
-          </div>
-        ))
-      }
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
+        <div class="mb-4 text-4xl">🚫</div>
+        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.1.title">No international card</h3>
+        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.1.desc">Most Bangladeshi developers don't have a Visa/Mastercard that works internationally. GitHub Copilot requires one.</p>
+      </div>
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
+        <div class="mb-4 text-4xl">💸</div>
+        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.2.title">$10 = ৳1,100/month</h3>
+        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.2.desc">That's expensive for junior devs and students in Bangladesh. Kobi starts at ৳500 — less than half the cost.</p>
+      </div>
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
+        <div class="mb-4 text-4xl">🤷</div>
+        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.3.title">No local support</h3>
+        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.3.desc">When things break, you're on your own. Kobi is built for BD developers with local support and BDT billing.</p>
+      </div>
     </div>
   </div>
 </section>

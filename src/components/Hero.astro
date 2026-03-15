@@ -15,15 +15,16 @@ import CodeAnimation from "./CodeAnimation";
       <div class="fade-in">
         <div
           class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400"
+          data-i18n="hero.badge"
         >
           Now available for VS Code
         </div>
         <h1
           class="mb-6 text-5xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl"
         >
-          Code like<br />a <span class="text-emerald-500">poet</span>
+          <span data-i18n="hero.title.1">Code like</span><br /><span data-i18n="hero.title.2">a </span><span class="text-emerald-500" data-i18n="hero.title.accent">poet</span>
         </h1>
-        <p class="mb-8 max-w-lg text-lg leading-relaxed text-kobi-muted md:text-xl">
+        <p class="mb-8 max-w-lg text-lg leading-relaxed text-kobi-muted md:text-xl" data-i18n="hero.description">
           AI coding assistant for Bangladeshi developers. Pay in BDT via bKash.
           No international card needed.
         </p>
@@ -31,12 +32,14 @@ import CodeAnimation from "./CodeAnimation";
           <a
             href="https://app.kobidev.com/signup"
             class="rounded-lg bg-emerald-500 px-8 py-3 text-center font-semibold text-black transition hover:bg-emerald-400"
+            data-i18n="hero.cta.primary"
           >
             Start free &rarr;
           </a>
           <a
             href="#pricing"
             class="rounded-lg border border-kobi-border px-8 py-3 text-center font-semibold text-white transition hover:border-kobi-muted hover:bg-kobi-surface"
+            data-i18n="hero.cta.secondary"
           >
             See pricing
           </a>
@@ -46,15 +49,15 @@ import CodeAnimation from "./CodeAnimation";
         >
           <span class="flex items-center gap-1.5">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            1M+ BD freelancers
+            <span data-i18n="hero.stat.1">1M+ BD freelancers</span>
           </span>
           <span class="flex items-center gap-1.5">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            From ৳500/month
+            <span data-i18n="hero.stat.2">From ৳500/month</span>
           </span>
           <span class="flex items-center gap-1.5">
             <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-            bKash accepted
+            <span data-i18n="hero.stat.3">bKash accepted</span>
           </span>
         </div>
       </div>

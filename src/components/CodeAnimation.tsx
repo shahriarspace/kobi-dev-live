@@ -57,7 +57,7 @@ export default function CodeAnimation() {
         <div className="h-3 w-3 rounded-full bg-red-500/80" />
         <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
         <div className="h-3 w-3 rounded-full bg-green-500/80" />
-        <span className="ml-2 text-xs text-kobi-muted">main.js — Kobi AI</span>
+        <span className="ml-2 text-xs text-kobi-muted" data-i18n="code.filename">main.js — Kobi AI</span>
       </div>
 
       {/* Code area */}
@@ -81,7 +81,7 @@ export default function CodeAnimation() {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            Kobi is suggesting...
+            <span data-i18n="code.suggesting">Kobi is suggesting...</span>
           </div>
         )}
       </div>
