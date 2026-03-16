@@ -191,6 +191,36 @@ export const translations = {
 
     // Page
     "page.title": "Kobi — GitHub Copilot Alternative for Bangladesh | Pay in BDT",
+
+    // Comparison
+    "compare.title": "Kobi vs GitHub Copilot",
+    "compare.subtitle": "Same AI power, built for Bangladesh. See how they compare.",
+    "compare.col.feature": "Feature",
+    "compare.cta": "Try Kobi free →",
+    "compare.row.price": "Price",
+    "compare.row.payment": "Payment",
+    "compare.row.completions": "Inline completions",
+    "compare.row.chat": "AI chat",
+    "compare.row.agent": "Agent mode",
+    "compare.row.models": "AI models",
+    "compare.row.support": "Local support",
+    "compare.row.intlcard": "International card",
+    "compare.kobi.price": "From ৳150/mo ($1.35)",
+    "compare.kobi.payment": "bKash / Nagad",
+    "compare.kobi.completions": "Up to unlimited",
+    "compare.kobi.chat": "Up to 10,000/mo",
+    "compare.kobi.agent": "Up to unlimited",
+    "compare.kobi.models": "Claude Haiku & Sonnet",
+    "compare.kobi.support": "Bangla support",
+    "compare.kobi.intlcard": "Not needed",
+    "compare.copilot.price": "$10/mo (৳1,100)",
+    "compare.copilot.payment": "International card only",
+    "compare.copilot.completions": "Unlimited",
+    "compare.copilot.chat": "Unlimited",
+    "compare.copilot.agent": "Included",
+    "compare.copilot.models": "GPT-4o & Claude",
+    "compare.copilot.support": "English only",
+    "compare.copilot.intlcard": "Required",
   },
 
   bn: {
@@ -385,6 +415,36 @@ export const translations = {
 
     // Page
     "page.title": "কবি — বাংলাদেশের GitHub Copilot বিকল্প | টাকায় পেমেন্ট",
+
+    // Comparison
+    "compare.title": "কবি vs GitHub Copilot",
+    "compare.subtitle": "একই AI শক্তি, বাংলাদেশের জন্য তৈরি। তুলনা দেখুন।",
+    "compare.col.feature": "ফিচার",
+    "compare.cta": "কবি ফ্রিতে ব্যবহার করুন →",
+    "compare.row.price": "দাম",
+    "compare.row.payment": "পেমেন্ট",
+    "compare.row.completions": "ইনলাইন কমপ্লিশন",
+    "compare.row.chat": "AI চ্যাট",
+    "compare.row.agent": "এজেন্ট মোড",
+    "compare.row.models": "AI মডেল",
+    "compare.row.support": "লোকাল সাপোর্ট",
+    "compare.row.intlcard": "ইন্টারন্যাশনাল কার্ড",
+    "compare.kobi.price": "৳১৫০/মাস থেকে ($১.৩৫)",
+    "compare.kobi.payment": "বিকাশ / নগদ",
+    "compare.kobi.completions": "আনলিমিটেড পর্যন্ত",
+    "compare.kobi.chat": "১০,০০০/মাস পর্যন্ত",
+    "compare.kobi.agent": "আনলিমিটেড পর্যন্ত",
+    "compare.kobi.models": "Claude Haiku ও Sonnet",
+    "compare.kobi.support": "বাংলা সাপোর্ট",
+    "compare.kobi.intlcard": "লাগবে না",
+    "compare.copilot.price": "$১০/মাস (৳১,১০০)",
+    "compare.copilot.payment": "শুধু ইন্টারন্যাশনাল কার্ড",
+    "compare.copilot.completions": "আনলিমিটেড",
+    "compare.copilot.chat": "আনলিমিটেড",
+    "compare.copilot.agent": "অন্তর্ভুক্ত",
+    "compare.copilot.models": "GPT-4o ও Claude",
+    "compare.copilot.support": "শুধু ইংরেজি",
+    "compare.copilot.intlcard": "আবশ্যক",
   },
 } as const;
 
