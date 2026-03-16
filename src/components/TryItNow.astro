@@ -1,0 +1,58 @@
+---
+---
+
+<section id="try" class="py-20 md:py-28 border-b border-kobi-border">
+  <div class="mx-auto max-w-4xl px-4 text-center">
+    <div class="fade-in">
+      <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl" data-i18n="try.title">
+        Try Kobi right now — no installation needed
+      </h2>
+      <p class="mx-auto max-w-2xl text-lg text-kobi-muted mb-8" data-i18n="try.subtitle">
+        Open our web chat and ask your first question in 30 seconds. No VS Code. No config. Works on your phone.
+      </p>
+
+      <!-- Mockup of web chat -->
+      <div class="mx-auto max-w-lg mb-8 rounded-xl border border-kobi-border bg-kobi-surface overflow-hidden shadow-2xl">
+        <div class="flex items-center gap-2 px-4 py-2.5 bg-[#111] border-b border-kobi-border">
+          <div class="flex gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
+          </div>
+          <span class="text-xs text-kobi-muted ml-2">chat.kobidev.com</span>
+        </div>
+        <div class="p-6 space-y-4">
+          <div class="flex justify-end">
+            <div class="bg-emerald-600 text-white px-4 py-2 rounded-2xl rounded-br-md text-sm max-w-[80%]">
+              How do I integrate bKash payment in Laravel?
+            </div>
+          </div>
+          <div class="flex justify-start">
+            <div class="bg-[#1a1a1a] border border-kobi-border px-4 py-3 rounded-2xl rounded-bl-md text-sm text-kobi-text max-w-[80%]">
+              <p class="mb-2">Here's a complete bKash payment integration:</p>
+              <div class="bg-[#111] rounded-lg p-3 text-xs font-mono text-emerald-400">
+                <span class="text-kobi-muted">// routes/web.php</span><br>
+                Route::post(<span class="text-amber-400">'/bkash/pay'</span>,<br>
+                &nbsp;&nbsp;[BkashController::class, <span class="text-amber-400">'create'</span>]);
+              </div>
+              <span class="inline-block w-2 h-4 bg-emerald-400 animate-pulse mt-1"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://chat.kobidev.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block rounded-lg bg-emerald-500 px-8 py-3.5 text-base font-semibold text-black transition hover:bg-emerald-400"
+        data-i18n="try.cta"
+      >
+        Open Kobi Web Chat →
+      </a>
+      <p class="mt-4 text-sm text-kobi-muted" data-i18n="try.note">
+        Free forever · No credit card · No installation
+      </p>
+    </div>
+  </div>
+</section>
