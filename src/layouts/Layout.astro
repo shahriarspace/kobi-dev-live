@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = "AI coding assistant for Bangladeshi developers. Inline completions, chat, agent mode. Pay in BDT via bKash. From ৳500/month.",
+  description = "GitHub Copilot alternative for Bangladeshi developers. Powered by Anthropic Claude. Unlimited completions on Pro+. Pay in BDT via bKash. From ৳150/month.",
 } = Astro.props;
 ---
 
@@ -67,15 +67,33 @@ const {
           },
           {
             "@type": "Offer",
-            "price": "500",
+            "price": "150",
+            "priceCurrency": "BDT",
+            "name": "Starter"
+          },
+          {
+            "@type": "Offer",
+            "price": "400",
             "priceCurrency": "BDT",
             "name": "Basic"
           },
           {
             "@type": "Offer",
-            "price": "1200",
+            "price": "900",
             "priceCurrency": "BDT",
             "name": "Pro"
+          },
+          {
+            "@type": "Offer",
+            "price": "2000",
+            "priceCurrency": "BDT",
+            "name": "Power"
+          },
+          {
+            "@type": "Offer",
+            "price": "5000",
+            "priceCurrency": "BDT",
+            "name": "Business"
           }
         ]
       }

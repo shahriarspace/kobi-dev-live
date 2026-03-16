@@ -245,13 +245,24 @@ const plans: Plan[] = [
             >
               {plan.ctaText}
             </a>
+
+            {/* Starter: "Less than a cup of tea per week" */}
+            {plan.launchOffer && (
+              <p class="mt-3 text-center text-xs text-kobi-muted italic" data-i18n="pricing.starter.tea">
+                Less than a cup of tea per week
+              </p>
+            )}
           </div>
         ))
       }
     </div>
 
-    <div class="fade-in mt-10 text-center">
-      <p class="text-sm text-kobi-muted" data-i18n="pricing.pay">Pay with bKash</p>
+    <div class="fade-in mt-10 flex flex-col items-center gap-3 text-center">
+      <span class="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 px-3 py-1 text-xs font-medium text-orange-400" data-i18n="pricing.claude">
+        ⚡ Powered by Anthropic Claude
+      </span>
+      <p class="text-sm text-kobi-muted" data-i18n="pricing.nocard">No card needed. Pay with bKash or Nagad. Usage resets monthly.</p>
+      <p class="text-sm text-kobi-muted" data-i18n="pricing.activate">All plans activate within 30 minutes of payment</p>
     </div>
   </div>
 </section>
