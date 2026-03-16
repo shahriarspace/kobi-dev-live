@@ -8,12 +8,12 @@ interface Props {
 
 const {
   title,
-  description = "GitHub Copilot alternative for Bangladeshi developers. Powered by Anthropic Claude. Unlimited completions on Pro+. Pay in BDT via bKash. From ৳150/month.",
+  description = "বাংলাদেশি ডেভেলপারদের জন্য AI কোডিং অ্যাসিস্ট্যান্ট। Anthropic Claude দিয়ে চলে। Pro+ এ আনলিমিটেড কমপ্লিশন। বিকাশে টাকায় পে করুন। মাত্র ৳১৫০/মাস থেকে।",
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="bn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,8 +31,8 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://kobidev.com/og-image.png" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="bn_BD" />
+    <meta property="og:locale" content="bn_BD" />
+    <meta property="og:locale:alternate" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -130,7 +130,7 @@ const {
         const STORAGE_KEY = "kobi-lang";
 
         function getLang() {
-          return localStorage.getItem(STORAGE_KEY) || "en";
+          return localStorage.getItem(STORAGE_KEY) || "bn";
         }
 
         function setLang(lang) {
@@ -170,6 +170,13 @@ const {
         const savedLang = getLang();
         if (savedLang !== "en") {
           applyTranslations(savedLang);
+        } else {
+          // English is in the HTML already, but update toggle label + html lang
+          document.documentElement.lang = "en";
+          const labelEl = document.getElementById("lang-label");
+          const labelMobileEl = document.getElementById("lang-label-mobile");
+          if (labelEl) labelEl.textContent = "বাং";
+          if (labelMobileEl) labelMobileEl.textContent = "বাং";
         }
 
         // Bind toggle buttons
