@@ -186,8 +186,7 @@ export const translations = {
     // Footer
     "footer.tagline": "Code like a poet",
     "footer.login": "Login",
-    "footer.made": "Made for Bangladesh",
-    "footer.built": "Built in Germany",
+    "footer.made": "Made in Bangladesh",
     "footer.copyright": "Kobi. All rights reserved.",
 
     // Page
@@ -381,8 +380,7 @@ export const translations = {
     // Footer
     "footer.tagline": "কবির মতো কোড লিখুন",
     "footer.login": "লগইন",
-    "footer.made": "বাংলাদেশের জন্য তৈরি",
-    "footer.built": "জার্মানিতে তৈরি",
+    "footer.made": "বাংলাদেশে তৈরি",
     "footer.copyright": "কবি। সর্বস্বত্ব সংরক্ষিত।",
 
     // Page
