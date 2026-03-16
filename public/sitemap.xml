@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://kobidev.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://kobidev.com/sitemap-landing.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://app.kobidev.com/sitemap.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://chat.kobidev.com/sitemap.xml</loc>
+  </sitemap>
+</sitemapindex>
