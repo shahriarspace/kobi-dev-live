@@ -19,6 +19,8 @@ export const translations = {
     "hero.stat.3": "bKash / Nagad",
     "hero.stat.4": "Powered by Claude",
     "hero.soon": "Coming Soon",
+    "hero.chat.q": "ami ekta website banate chai",
+    "hero.chat.a": "Tech stack + plan ready! 🚀",
     "hero.sms.q": "eng thik koro: i am go market",
     "hero.sms.a": "\"I am going to the market\" ✅",
     "hero.interview.q": "What is useEffect?",
@@ -29,8 +31,11 @@ export const translations = {
     "code.filename": "main.js — Kobi AI",
 
     // Products
-    "products.title": "One platform, five AI tools",
+    "products.title": "One platform, six AI tools",
     "products.subtitle": "Everything a Bangladeshi professional needs — coding, communication, career, freelancing. One credit wallet powers them all.",
+    "products.chat.name": "Kobi Chat",
+    "products.chat.desc": "AI chat assistant on the web. Ask anything in Bangla, Banglish, or English. Get instant answers from your browser — no app needed.",
+    "products.chat.status": "Live",
     "products.code.name": "Kobi Code",
     "products.code.desc": "AI coding assistant for VS Code. Inline completions, chat, agent mode, BD templates. The GitHub Copilot alternative for Bangladesh.",
     "products.code.status": "Live",
@@ -65,7 +70,7 @@ export const translations = {
     "features.title": "Built for Bangladesh, powered by world-class AI",
     "features.subtitle": "Anthropic Claude powers everything. Pay in BDT. Get Bangla support. Use across all Kobi apps.",
     "features.1.title": "Unified credits",
-    "features.1.desc": "1 Kobi Credit = ৳1 BDT. Buy once, use across all 5 apps. No separate subscriptions.",
+    "features.1.desc": "1 Kobi Credit = ৳1 BDT. Buy once, use across all 6 apps. No separate subscriptions.",
     "features.2.title": "Bangla & Banglish",
     "features.2.desc": "Full Bangla interface. AI understands Banglish input. Built by Bangladeshis, for Bangladeshis.",
     "features.3.title": "bKash & Nagad",
@@ -79,13 +84,28 @@ export const translations = {
 
     // Product Demos
     "demo.title": "See Kobi in action",
-    "demo.subtitle": "Five AI tools, one platform. Click a product to see how it works.",
+    "demo.subtitle": "Six AI tools, one platform. Click a product to see how it works.",
+    "demo.tab.chat": "Chat",
     "demo.tab.code": "Code",
     "demo.tab.sms": "SMS",
     "demo.tab.interview": "Interview",
     "demo.tab.cv": "CV",
     "demo.tab.freelance": "Freelance",
     "demo.note": "Free tier included for all products. No card needed.",
+    // Demo: Kobi Chat
+    "demo.chat.title": "AI chat assistant on the web",
+    "demo.chat.desc": "Ask anything in Bangla, Banglish, or English. Get instant AI answers from your browser. No app needed — just open chat.kobidev.com.",
+    "demo.chat.f1": "Works from any browser, any device",
+    "demo.chat.f2": "Bangla, Banglish, and English",
+    "demo.chat.f3": "Conversation history saved",
+    "demo.chat.f4": "1 credit per message",
+    "demo.chat.cta1": "Open Kobi Chat →",
+    "demo.chat.cta2": "Create free account",
+    "demo.chat.q1": "ami ekta e-commerce site banate chai, kothay theke shuru korbo?",
+    "demo.chat.a1": "E-commerce site er jonno plan:",
+    "demo.chat.a2": "1. Tech stack: React + Node.js + PostgreSQL\n2. Payment: bKash + Nagad integration\n3. Hosting: Vercel (free tier) + Supabase\n4. Delivery: Pathao/Steadfast API",
+    "demo.chat.q2": "bKash integration er code daw",
+    "demo.chat.placeholder": "Type your message...",
     // Demo: Kobi Code
     "demo.code.title": "AI coding assistant for VS Code",
     "demo.code.desc": "Inline completions, AI chat, agent mode, BD templates. The GitHub Copilot alternative built for Bangladesh.",
@@ -93,8 +113,8 @@ export const translations = {
     "demo.code.f2": "AI chat panel in VS Code",
     "demo.code.f3": "Agent mode for multi-file tasks",
     "demo.code.f4": "BD templates: bKash, Nagad, NID + more",
-    "demo.code.cta1": "Open Web Chat →",
-    "demo.code.cta2": "Install VS Code Extension",
+    "demo.code.cta1": "Install VS Code Extension →",
+    "demo.code.cta2": "Open Web Chat",
     // Demo: Kobi SMS
     "demo.sms.title": "AI via SMS — no internet needed",
     "demo.sms.desc": "Text a question to Kobi, get an AI answer back. Works on any phone — even basic feature phones. Bangla and Banglish supported.",
@@ -224,6 +244,8 @@ export const translations = {
     "pricing.usage.title": "Credits per action",
     "pricing.usage.completion": "Code completion",
     "pricing.usage.completion.cost": "0.5 credit",
+    "pricing.usage.webchat": "Web chat message",
+    "pricing.usage.webchat.cost": "1 credit",
     "pricing.usage.chat": "AI chat message",
     "pricing.usage.chat.cost": "1-3 credits",
     "pricing.usage.agent": "Agent task",
@@ -324,7 +346,7 @@ export const translations = {
     "footer.copyright": "Kobi. All rights reserved.",
 
     // Page
-    "page.title": "Kobi — AI Platform for Bangladesh | Code, SMS, CV, Interview, Freelance",
+    "page.title": "Kobi — AI Platform for Bangladesh | Chat, Code, SMS, CV, Interview, Freelance",
   },
 
   bn: {
@@ -347,6 +369,8 @@ export const translations = {
     "hero.stat.3": "বিকাশ / নগদ",
     "hero.stat.4": "Claude দিয়ে চলে",
     "hero.soon": "শীঘ্রই আসছে",
+    "hero.chat.q": "ami ekta website banate chai",
+    "hero.chat.a": "Tech stack + plan ready! 🚀",
     "hero.sms.q": "eng thik koro: i am go market",
     "hero.sms.a": "\"I am going to the market\" ✅",
     "hero.interview.q": "useEffect কী?",
@@ -357,8 +381,11 @@ export const translations = {
     "code.filename": "main.js — Kobi AI",
 
     // Products
-    "products.title": "এক প্ল্যাটফর্ম, পাঁচটি AI টুল",
+    "products.title": "এক প্ল্যাটফর্ম, ছয়টি AI টুল",
     "products.subtitle": "বাংলাদেশি পেশাদারের যা কিছু দরকার — কোডিং, যোগাযোগ, ক্যারিয়ার, ফ্রিল্যান্সিং। এক ক্রেডিট ওয়ালেটে সব চলবে।",
+    "products.chat.name": "Kobi Chat",
+    "products.chat.desc": "ওয়েবে AI চ্যাট অ্যাসিস্ট্যান্ট। বাংলা, বাংলিশ বা ইংরেজিতে যেকোনো কিছু জিজ্ঞেস করুন। ব্রাউজার থেকেই তাৎক্ষণিক উত্তর পান — কোনো অ্যাপ লাগবে না।",
+    "products.chat.status": "লাইভ",
     "products.code.name": "Kobi Code",
     "products.code.desc": "VS Code-এর জন্য AI কোডিং অ্যাসিস্ট্যান্ট। ইনলাইন কমপ্লিশন, চ্যাট, এজেন্ট মোড, BD টেমপ্লেট। বাংলাদেশের GitHub Copilot বিকল্প।",
     "products.code.status": "লাইভ",
@@ -393,7 +420,7 @@ export const translations = {
     "features.title": "বাংলাদেশের জন্য তৈরি, বিশ্বমানের AI দিয়ে চলে",
     "features.subtitle": "Anthropic Claude সবকিছু চালায়। টাকায় পে করুন। বাংলা সাপোর্ট পান। সব কবি অ্যাপে ব্যবহার করুন।",
     "features.1.title": "ইউনিফাইড ক্রেডিট",
-    "features.1.desc": "১ কবি ক্রেডিট = ৳১ BDT। একবার কিনুন, ৫টি অ্যাপেই ব্যবহার করুন। আলাদা সাবস্ক্রিপশন নেই।",
+    "features.1.desc": "১ কবি ক্রেডিট = ৳১ BDT। একবার কিনুন, ৬টি অ্যাপেই ব্যবহার করুন। আলাদা সাবস্ক্রিপশন নেই।",
     "features.2.title": "বাংলা ও বাংলিশ",
     "features.2.desc": "সম্পূর্ণ বাংলা ইন্টারফেস। AI বাংলিশ ইনপুট বোঝে। বাংলাদেশিদের দ্বারা, বাংলাদেশিদের জন্য তৈরি।",
     "features.3.title": "বিকাশ ও নগদ",
@@ -407,13 +434,28 @@ export const translations = {
 
     // Product Demos
     "demo.title": "কবি কীভাবে কাজ করে দেখুন",
-    "demo.subtitle": "পাঁচটি AI টুল, এক প্ল্যাটফর্ম। কোনো প্রোডাক্টে ক্লিক করে দেখুন কীভাবে কাজ করে।",
+    "demo.subtitle": "ছয়টি AI টুল, এক প্ল্যাটফর্ম। কোনো প্রোডাক্টে ক্লিক করে দেখুন কীভাবে কাজ করে।",
+    "demo.tab.chat": "চ্যাট",
     "demo.tab.code": "কোড",
     "demo.tab.sms": "SMS",
     "demo.tab.interview": "ইন্টারভিউ",
     "demo.tab.cv": "CV",
     "demo.tab.freelance": "ফ্রিল্যান্স",
     "demo.note": "সব প্রোডাক্টে ফ্রি টিয়ার আছে। কার্ড লাগবে না।",
+    // Demo: Kobi Chat
+    "demo.chat.title": "ওয়েবে AI চ্যাট অ্যাসিস্ট্যান্ট",
+    "demo.chat.desc": "বাংলা, বাংলিশ বা ইংরেজিতে যেকোনো কিছু জিজ্ঞেস করুন। ব্রাউজার থেকেই তাৎক্ষণিক AI উত্তর পান। অ্যাপ লাগবে না — শুধু chat.kobidev.com খুলুন।",
+    "demo.chat.f1": "যেকোনো ব্রাউজার, যেকোনো ডিভাইস থেকে চলে",
+    "demo.chat.f2": "বাংলা, বাংলিশ, ও ইংরেজি",
+    "demo.chat.f3": "কথোপকথনের ইতিহাস সেভ থাকে",
+    "demo.chat.f4": "প্রতি মেসেজে ১ ক্রেডিট",
+    "demo.chat.cta1": "কবি চ্যাট খুলুন →",
+    "demo.chat.cta2": "ফ্রি অ্যাকাউন্ট খুলুন",
+    "demo.chat.q1": "ami ekta e-commerce site banate chai, kothay theke shuru korbo?",
+    "demo.chat.a1": "ই-কমার্স সাইটের জন্য প্ল্যান:",
+    "demo.chat.a2": "১. টেক স্ট্যাক: React + Node.js + PostgreSQL\n২. পেমেন্ট: বিকাশ + নগদ ইন্টিগ্রেশন\n৩. হোস্টিং: Vercel (ফ্রি টিয়ার) + Supabase\n৪. ডেলিভারি: পাঠাও/Steadfast API",
+    "demo.chat.q2": "bKash integration er code daw",
+    "demo.chat.placeholder": "আপনার মেসেজ লিখুন...",
     // Demo: Kobi Code
     "demo.code.title": "VS Code-এর জন্য AI কোডিং অ্যাসিস্ট্যান্ট",
     "demo.code.desc": "ইনলাইন কমপ্লিশন, AI চ্যাট, এজেন্ট মোড, BD টেমপ্লেট। বাংলাদেশের GitHub Copilot বিকল্প।",
@@ -421,8 +463,8 @@ export const translations = {
     "demo.code.f2": "VS Code-এ AI চ্যাট প্যানেল",
     "demo.code.f3": "মাল্টি-ফাইল টাস্কের জন্য এজেন্ট মোড",
     "demo.code.f4": "BD টেমপ্লেট: বিকাশ, নগদ, NID + আরও",
-    "demo.code.cta1": "ওয়েব চ্যাট খুলুন →",
-    "demo.code.cta2": "VS Code এক্সটেনশন ইনস্টল করুন",
+    "demo.code.cta1": "VS Code এক্সটেনশন ইনস্টল করুন →",
+    "demo.code.cta2": "ওয়েব চ্যাট খুলুন",
     // Demo: Kobi SMS
     "demo.sms.title": "SMS-এ AI — ইন্টারনেট লাগবে না",
     "demo.sms.desc": "কবিকে প্রশ্ন পাঠান, AI উত্তর পান। যেকোনো ফোনে চলবে — ফিচার ফোনেও। বাংলা ও বাংলিশ সাপোর্ট।",
@@ -552,6 +594,8 @@ export const translations = {
     "pricing.usage.title": "প্রতি অ্যাকশনে ক্রেডিট",
     "pricing.usage.completion": "কোড কমপ্লিশন",
     "pricing.usage.completion.cost": "০.৫ ক্রেডিট",
+    "pricing.usage.webchat": "ওয়েব চ্যাট মেসেজ",
+    "pricing.usage.webchat.cost": "১ ক্রেডিট",
     "pricing.usage.chat": "AI চ্যাট মেসেজ",
     "pricing.usage.chat.cost": "১-৩ ক্রেডিট",
     "pricing.usage.agent": "এজেন্ট টাস্ক",
@@ -652,7 +696,7 @@ export const translations = {
     "footer.copyright": "কবি। সর্বস্বত্ব সংরক্ষিত।",
 
     // Page
-    "page.title": "কবি — বাংলাদেশের AI প্ল্যাটফর্ম | কোড, SMS, CV, ইন্টারভিউ, ফ্রিল্যান্স",
+    "page.title": "কবি — বাংলাদেশের AI প্ল্যাটফর্ম | চ্যাট, কোড, SMS, CV, ইন্টারভিউ, ফ্রিল্যান্স",
   },
 } as const;
 
