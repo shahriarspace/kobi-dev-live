@@ -1,36 +1,34 @@
 ---
+const stats = [
+  { numberKey: "social.stat1.number", number: "185M", labelKey: "social.stat1.label", label: "Bangladeshis we serve" },
+  { numberKey: "social.stat2.number", number: "650K+", labelKey: "social.stat2.label", label: "Active BD freelancers" },
+  { numberKey: "social.stat3.number", number: "100M+", labelKey: "social.stat3.label", label: "Feature phone users (SMS target)" },
+  { numberKey: "social.stat4.number", number: "৳150", labelKey: "social.stat4.label", label: "Starting price per month" },
+];
 ---
 
 <section id="social-proof" class="py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-4">
-    <div class="fade-in text-center">
+    <div class="fade-in mb-12 text-center">
       <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl" data-i18n="social.title">
-        Trusted by developers across Bangladesh
+        Built for 185 million Bangladeshis
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-kobi-muted" data-i18n="social.subtitle">
-        Join a growing community of Bangladeshi developers coding with AI.
+        Join a growing community of Bangladeshi professionals using AI.
       </p>
+    </div>
 
-      <!-- Placeholder: stats or testimonials will be added as users come in -->
-      <div class="mt-12 grid gap-6 sm:grid-cols-3">
-        <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
-          <p class="text-3xl font-bold text-emerald-500">৳150</p>
-          <p class="mt-2 text-sm text-kobi-muted" data-i18n="social.stat1">Starting price per month</p>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {stats.map((stat) => (
+        <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+          <div class="mb-2 text-3xl font-black text-emerald-400" data-i18n={stat.numberKey}>
+            {stat.number}
+          </div>
+          <div class="text-sm text-kobi-muted" data-i18n={stat.labelKey}>
+            {stat.label}
+          </div>
         </div>
-        <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
-          <p class="text-3xl font-bold text-emerald-500">30 min</p>
-          <p class="mt-2 text-sm text-kobi-muted" data-i18n="social.stat2">Average activation time</p>
-        </div>
-        <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
-          <p class="text-3xl font-bold text-emerald-500">7</p>
-          <p class="mt-2 text-sm text-kobi-muted" data-i18n="social.stat3">Plans to fit every budget</p>
-        </div>
-      </div>
-
-      <!-- Testimonial placeholder -->
-      <p class="mt-10 text-sm text-kobi-muted/50 italic">
-        Testimonials coming soon as our community grows.
-      </p>
+      ))}
     </div>
   </div>
 </section>

@@ -8,7 +8,7 @@ interface Props {
 
 const {
   title,
-  description = "বাংলাদেশি ডেভেলপারদের জন্য AI কোডিং অ্যাসিস্ট্যান্ট। Anthropic Claude দিয়ে চলে। Pro+ এ আনলিমিটেড কমপ্লিশন। বিকাশে টাকায় পে করুন। মাত্র ৳১৫০/মাস থেকে।",
+  description = "বাংলাদেশি পেশাদারদের জন্য AI প্ল্যাটফর্ম। কোড, SMS, CV, ইন্টারভিউ, ফ্রিল্যান্স — সবকিছুতে AI। Anthropic Claude দিয়ে চলে। বিকাশে টাকায় পে করুন। মাত্র ৳১৫০/মাস থেকে।",
 } = Astro.props;
 ---
 
@@ -20,7 +20,7 @@ const {
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="AI coding, GitHub Copilot alternative, Bangladesh, BDT, bKash, কোডিং, AI, বাংলাদেশ, VS Code extension"
+      content="AI platform, Bangladesh, BDT, bKash, কোডিং, AI, বাংলাদেশ, VS Code, SMS AI, CV builder, interview coach, freelance proposal, কবি"
     />
     <meta name="author" content="Kobi" />
     <meta name="google-site-verification" content="xwZVlGH--ahwzCkJKSRHERvuIPYEYT8Yzka5oPPgbJw" />
@@ -56,45 +56,51 @@ const {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Kobi",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Windows, macOS, Linux",
-        "description": "AI coding assistant for Bangladeshi developers. Pay in BDT via bKash.",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, macOS, Linux, Web, SMS",
+        "description": "AI platform for Bangladeshi professionals. Code, SMS, CV, Interview, Freelance tools. Pay in BDT via bKash.",
         "offers": [
           {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "BDT",
-            "name": "Free"
+            "name": "Free",
+            "description": "50 one-time credits"
           },
           {
             "@type": "Offer",
             "price": "150",
             "priceCurrency": "BDT",
-            "name": "Starter"
+            "name": "Starter",
+            "description": "200 credits/month"
           },
           {
             "@type": "Offer",
             "price": "400",
             "priceCurrency": "BDT",
-            "name": "Basic"
+            "name": "Basic",
+            "description": "600 credits/month"
           },
           {
             "@type": "Offer",
             "price": "900",
             "priceCurrency": "BDT",
-            "name": "Pro"
+            "name": "Pro",
+            "description": "1500 credits/month"
           },
           {
             "@type": "Offer",
             "price": "2000",
             "priceCurrency": "BDT",
-            "name": "Power"
+            "name": "Power",
+            "description": "4000 credits/month with rollover"
           },
           {
             "@type": "Offer",
             "price": "5000",
             "priceCurrency": "BDT",
-            "name": "Business"
+            "name": "Business",
+            "description": "12000 credits/month with rollover"
           }
         ]
       }
@@ -186,10 +192,9 @@ const {
         if (toggleBtnMobile) toggleBtnMobile.addEventListener("click", toggleLang);
 
         // MutationObserver: re-apply translations when React adds new elements with data-i18n
-        // (e.g., CodeAnimation re-renders "Kobi is suggesting..." on each animation cycle)
         const mutationObserver = new MutationObserver((mutations) => {
           const lang = getLang();
-          if (lang === "en") return; // English is the default, no need to translate
+          if (lang === "en") return;
           const t = translations[lang];
           if (!t) return;
 
@@ -197,14 +202,12 @@ const {
             for (const node of mutation.addedNodes) {
               if (node.nodeType !== Node.ELEMENT_NODE) continue;
               const el = node;
-              // Check the added node itself
               if (el.hasAttribute && el.hasAttribute("data-i18n")) {
                 const key = el.getAttribute("data-i18n");
                 if (key && t[key] !== undefined) {
                   el.textContent = t[key];
                 }
               }
-              // Check descendants
               if (el.querySelectorAll) {
                 el.querySelectorAll("[data-i18n]").forEach((child) => {
                   const key = child.getAttribute("data-i18n");

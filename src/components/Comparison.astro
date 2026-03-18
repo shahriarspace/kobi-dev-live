@@ -1,48 +1,90 @@
 ---
 const rows = [
-  { key: "compare.row.price",       label: "Price",                kobi: "compare.kobi.price",       copilot: "compare.copilot.price",       kobiWin: true  },
-  { key: "compare.row.payment",     label: "Payment",              kobi: "compare.kobi.payment",     copilot: "compare.copilot.payment",     kobiWin: true  },
-  { key: "compare.row.completions", label: "Inline completions",   kobi: "compare.kobi.completions", copilot: "compare.copilot.completions", kobiWin: false },
-  { key: "compare.row.chat",        label: "AI chat",              kobi: "compare.kobi.chat",        copilot: "compare.copilot.chat",        kobiWin: false },
-  { key: "compare.row.agent",       label: "Agent mode",           kobi: "compare.kobi.agent",       copilot: "compare.copilot.agent",       kobiWin: false },
-  { key: "compare.row.models",      label: "AI models",            kobi: "compare.kobi.models",      copilot: "compare.copilot.models",      kobiWin: false },
-  { key: "compare.row.support",     label: "Local support",        kobi: "compare.kobi.support",     copilot: "compare.copilot.support",     kobiWin: true  },
-  { key: "compare.row.intlcard",    label: "International card",   kobi: "compare.kobi.intlcard",    copilot: "compare.copilot.intlcard",    kobiWin: true  },
+  { key: "compare.row.price",    label: "Price",            kobi: "compare.kobi.price",    copilot: "compare.copilot.price",    chatgpt: "compare.chatgpt.price",    claude: "compare.claude.price",    kobiWin: true  },
+  { key: "compare.row.payment",  label: "Payment",          kobi: "compare.kobi.payment",  copilot: "compare.copilot.payment",  chatgpt: "compare.chatgpt.payment",  claude: "compare.claude.payment",  kobiWin: true  },
+  { key: "compare.row.bangla",   label: "Bangla support",   kobi: "compare.kobi.bangla",   copilot: "compare.copilot.bangla",   chatgpt: "compare.chatgpt.bangla",   claude: "compare.claude.bangla",   kobiWin: true  },
+  { key: "compare.row.bd",       label: "BD templates",     kobi: "compare.kobi.bd",       copilot: "compare.copilot.bd",       chatgpt: "compare.chatgpt.bd",       claude: "compare.claude.bd",       kobiWin: true  },
+  { key: "compare.row.sms",      label: "SMS access",       kobi: "compare.kobi.sms",      copilot: "compare.copilot.sms",      chatgpt: "compare.chatgpt.sms",      claude: "compare.claude.sms",      kobiWin: true  },
+  { key: "compare.row.coding",   label: "Coding AI",        kobi: "compare.kobi.coding",   copilot: "compare.copilot.coding",   chatgpt: "compare.chatgpt.coding",   claude: "compare.claude.coding",   kobiWin: true  },
+  { key: "compare.row.cv",       label: "CV builder",       kobi: "compare.kobi.cv",       copilot: "compare.copilot.cv",       chatgpt: "compare.chatgpt.cv",       claude: "compare.claude.cv",       kobiWin: true  },
+  { key: "compare.row.intlcard", label: "International card", kobi: "compare.kobi.intlcard", copilot: "compare.copilot.intlcard", chatgpt: "compare.chatgpt.intlcard", claude: "compare.claude.intlcard", kobiWin: true  },
 ];
+
+const kobiValues: Record<string, string> = {
+  "compare.kobi.price": "From ৳150/mo",
+  "compare.kobi.payment": "bKash / Nagad",
+  "compare.kobi.bangla": "Full Bangla + Banglish",
+  "compare.kobi.bd": "bKash, Nagad, NID + more",
+  "compare.kobi.sms": "Yes — any phone",
+  "compare.kobi.coding": "VS Code + Web",
+  "compare.kobi.cv": "Coming soon",
+  "compare.kobi.intlcard": "Not needed",
+};
+
+const copilotValues: Record<string, string> = {
+  "compare.copilot.price": "$10/mo (৳1,100)",
+  "compare.copilot.payment": "International card",
+  "compare.copilot.bangla": "No",
+  "compare.copilot.bd": "No",
+  "compare.copilot.sms": "No",
+  "compare.copilot.coding": "VS Code",
+  "compare.copilot.cv": "No",
+  "compare.copilot.intlcard": "Required",
+};
+
+const chatgptValues: Record<string, string> = {
+  "compare.chatgpt.price": "$20/mo (৳2,200)",
+  "compare.chatgpt.payment": "International card",
+  "compare.chatgpt.bangla": "Limited",
+  "compare.chatgpt.bd": "No",
+  "compare.chatgpt.sms": "No",
+  "compare.chatgpt.coding": "Web only",
+  "compare.chatgpt.cv": "No",
+  "compare.chatgpt.intlcard": "Required",
+};
+
+const claudeValues: Record<string, string> = {
+  "compare.claude.price": "$20/mo (৳2,200)",
+  "compare.claude.payment": "International card",
+  "compare.claude.bangla": "Limited",
+  "compare.claude.bd": "No",
+  "compare.claude.sms": "No",
+  "compare.claude.coding": "Web only",
+  "compare.claude.cv": "No",
+  "compare.claude.intlcard": "Required",
+};
 ---
 
-<section id="comparison" class="py-20 md:py-28">
-  <div class="mx-auto max-w-4xl px-4">
-    <div class="fade-in mb-16 text-center">
+<section id="comparison" class="py-20 md:py-28 border-b border-kobi-border">
+  <div class="mx-auto max-w-6xl px-4">
+    <div class="fade-in mb-12 text-center">
       <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl" data-i18n="compare.title">
-        Kobi vs GitHub Copilot
+        Kobi vs the alternatives
       </h2>
       <p class="mx-auto max-w-2xl text-lg text-kobi-muted" data-i18n="compare.subtitle">
-        Same AI power, built for Bangladesh. See how they compare.
+        Same AI power, built for Bangladesh. See how we compare.
       </p>
     </div>
 
-    <div class="fade-in overflow-hidden rounded-xl border border-kobi-border">
-      <table class="w-full text-left text-sm">
+    <div class="fade-in overflow-x-auto">
+      <table class="w-full min-w-[640px] text-sm">
         <thead>
-          <tr class="border-b border-kobi-border bg-kobi-surface">
-            <th class="px-6 py-4 font-semibold text-kobi-muted" data-i18n="compare.col.feature">Feature</th>
-            <th class="px-6 py-4 text-center font-semibold text-emerald-500">Kobi</th>
-            <th class="px-6 py-4 text-center font-semibold text-kobi-muted">GitHub Copilot</th>
+          <tr class="border-b border-kobi-border">
+            <th class="px-4 py-3 text-left font-semibold text-kobi-muted" data-i18n="compare.col.feature">Feature</th>
+            <th class="px-4 py-3 text-left font-semibold text-emerald-400" data-i18n="compare.col.kobi">Kobi</th>
+            <th class="px-4 py-3 text-left font-semibold text-kobi-muted" data-i18n="compare.col.copilot">GitHub Copilot</th>
+            <th class="px-4 py-3 text-left font-semibold text-kobi-muted" data-i18n="compare.col.chatgpt">ChatGPT Plus</th>
+            <th class="px-4 py-3 text-left font-semibold text-kobi-muted" data-i18n="compare.col.claude">Claude Pro</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr class:list={["border-b border-kobi-border last:border-b-0 transition", i % 2 === 0 ? "bg-kobi-bg" : "bg-kobi-surface/50"]}>
-              <td class="px-6 py-4 font-medium text-white" data-i18n={row.key}>{row.label}</td>
-              <td class="px-6 py-4 text-center">
-                <span class:list={["inline-block rounded-full px-3 py-1 text-xs font-semibold", row.kobiWin ? "bg-emerald-500/10 text-emerald-400" : "text-kobi-muted"]} data-i18n={row.kobi}>
-                </span>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <span class="inline-block rounded-full px-3 py-1 text-xs font-semibold text-kobi-muted" data-i18n={row.copilot}>
-                </span>
-              </td>
+            <tr class={`border-b border-kobi-border/50 ${i % 2 === 0 ? 'bg-kobi-surface/50' : ''}`}>
+              <td class="px-4 py-3 font-medium text-kobi-text" data-i18n={row.key}>{row.label}</td>
+              <td class="px-4 py-3 font-semibold text-emerald-400" data-i18n={row.kobi}>{kobiValues[row.kobi]}</td>
+              <td class="px-4 py-3 text-kobi-muted" data-i18n={row.copilot}>{copilotValues[row.copilot]}</td>
+              <td class="px-4 py-3 text-kobi-muted" data-i18n={row.chatgpt}>{chatgptValues[row.chatgpt]}</td>
+              <td class="px-4 py-3 text-kobi-muted" data-i18n={row.claude}>{claudeValues[row.claude]}</td>
             </tr>
           ))}
         </tbody>
@@ -50,8 +92,12 @@ const rows = [
     </div>
 
     <div class="fade-in mt-8 text-center">
-      <a href="https://app.kobidev.com/signup" class="inline-block rounded-lg bg-emerald-500 px-8 py-3 text-sm font-semibold text-black transition hover:bg-emerald-400" data-i18n="compare.cta">
-        Try Kobi free →
+      <a
+        href="https://app.kobidev.com/signup"
+        class="inline-block rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400"
+        data-i18n="compare.cta"
+      >
+        Try Kobi free &rarr;
       </a>
     </div>
   </div>

@@ -3,30 +3,45 @@
 
 <footer class="border-t border-kobi-border py-12">
   <div class="mx-auto max-w-6xl px-4">
-    <div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+    <div class="grid gap-8 md:grid-cols-4">
+      <!-- Brand -->
+      <div class="md:col-span-2">
+        <span class="text-xl font-bold text-white">Kobi <span class="text-emerald-500">কবি</span></span>
+        <p class="mt-2 text-sm text-kobi-muted" data-i18n="footer.tagline">
+          AI for every Bangladeshi professional
+        </p>
+      </div>
+
+      <!-- Products -->
       <div>
-        <span class="text-xl font-bold text-white"
-          >Kobi <span class="text-emerald-500">কবি</span></span
-        >
-        <p class="mt-1 text-sm text-kobi-muted" data-i18n="footer.tagline">Code like a poet</p>
+        <h4 class="mb-3 text-sm font-semibold text-white" data-i18n="footer.products">Products</h4>
+        <ul class="space-y-2 text-sm text-kobi-muted">
+          <li><a href="#products" class="hover:text-white transition">Kobi Code</a></li>
+          <li><a href="#products" class="hover:text-white transition">Kobi SMS</a></li>
+          <li><a href="#products" class="hover:text-white transition">Kobi Interview</a></li>
+          <li><a href="#products" class="hover:text-white transition">Kobi CV</a></li>
+          <li><a href="#products" class="hover:text-white transition">Kobi Freelance</a></li>
+        </ul>
       </div>
 
-      <div class="flex gap-6 text-sm text-kobi-muted">
-        <a href="#features" class="transition hover:text-white" data-i18n="nav.features">Features</a>
-        <a href="#pricing" class="transition hover:text-white" data-i18n="nav.pricing">Pricing</a>
-        <a href="#download" class="transition hover:text-white" data-i18n="nav.download">Download</a>
-        <a
-          href="https://app.kobidev.com/login"
-          class="transition hover:text-white" data-i18n="footer.login">Login</a
-        >
-      </div>
-
-      <div class="text-sm text-kobi-muted">
-        <span data-i18n="footer.made">Made in Bangladesh</span>
+      <!-- Company -->
+      <div>
+        <h4 class="mb-3 text-sm font-semibold text-white" data-i18n="footer.company">Company</h4>
+        <ul class="space-y-2 text-sm text-kobi-muted">
+          <li><a href="https://app.kobidev.com/login" class="hover:text-white transition" data-i18n="footer.login">Login</a></li>
+          <li><a href="#pricing" class="hover:text-white transition" data-i18n="footer.pricing">Pricing</a></li>
+          <li><a href="mailto:hello@kobidev.com" class="hover:text-white transition" data-i18n="footer.contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-    <div class="mt-8 text-center text-xs text-kobi-muted/50">
-      &copy; {new Date().getFullYear()} <span data-i18n="footer.copyright">Kobi. All rights reserved.</span>
+
+    <div class="mt-8 flex flex-col items-center justify-between gap-4 border-t border-kobi-border pt-8 sm:flex-row">
+      <p class="text-sm text-kobi-muted">
+        &copy; 2024 <span data-i18n="footer.copyright">Kobi. All rights reserved.</span>
+      </p>
+      <p class="text-sm text-kobi-muted" data-i18n="footer.made">
+        Made in Bangladesh
+      </p>
     </div>
   </div>
 </footer>

@@ -3,32 +3,47 @@
 
 <section class="py-20 md:py-28">
   <div class="mx-auto max-w-6xl px-4">
-    <div class="fade-in mb-16 text-center">
-      <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">
-        <span data-i18n="problem.title.1">GitHub Copilot costs $10/month.</span><br />
-        <span class="text-kobi-muted" data-i18n="problem.title.2">In USD.</span>
+    <div class="fade-in mb-4 text-center">
+      <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl" data-i18n="problem.title.1">
+        AI tools cost $20+/month.
       </h2>
-      <p class="mx-auto max-w-2xl text-lg text-kobi-muted" data-i18n="problem.subtitle">
-        For most Bangladeshi developers, that's not just expensive — it's
-        inaccessible.
+      <p class="text-3xl font-bold text-emerald-500 md:text-4xl" data-i18n="problem.title.2">
+        In USD.
+      </p>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-kobi-muted" data-i18n="problem.subtitle">
+        For most Bangladeshi professionals, that's not just expensive — it's inaccessible.
       </p>
     </div>
 
-    <div class="grid gap-6 md:grid-cols-3">
-      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
-        <div class="mb-4 text-4xl">🚫</div>
-        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.1.title">No international card</h3>
-        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.1.desc">Most Bangladeshi developers don't have a Visa/Mastercard that works internationally. GitHub Copilot requires one.</p>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-red-500/10">
+          <svg class="h-6 w-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+        </div>
+        <h3 class="mb-2 text-lg font-semibold text-white" data-i18n="problem.1.title">No international card</h3>
+        <p class="text-sm leading-relaxed text-kobi-muted" data-i18n="problem.1.desc">
+          Most Bangladeshis don't have Visa/Mastercard for international payments. ChatGPT, Copilot, Claude — all require one.
+        </p>
       </div>
-      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
-        <div class="mb-4 text-4xl">💸</div>
-        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.2.title">$10 = ৳1,100/month</h3>
-        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.2.desc">That's expensive for junior devs and students in Bangladesh. Kobi starts at ৳500 — less than half the cost.</p>
+
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500/10">
+          <svg class="h-6 w-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="mb-2 text-lg font-semibold text-white" data-i18n="problem.2.title">$20 = ৳2,200/month</h3>
+        <p class="text-sm leading-relaxed text-kobi-muted" data-i18n="problem.2.desc">
+          That's expensive for students, junior devs, and freelancers. Kobi starts at ৳150/month — a fraction of the cost.
+        </p>
       </div>
-      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-8">
-        <div class="mb-4 text-4xl">🤷</div>
-        <h3 class="mb-2 text-xl font-semibold text-white" data-i18n="problem.3.title">No local support</h3>
-        <p class="leading-relaxed text-kobi-muted" data-i18n="problem.3.desc">When things break, you're on your own. Kobi is built for BD developers with local support and BDT billing.</p>
+
+      <div class="fade-in rounded-xl border border-kobi-border bg-kobi-surface p-6">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/10">
+          <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+        </div>
+        <h3 class="mb-2 text-lg font-semibold text-white" data-i18n="problem.3.title">No Bangla, no local context</h3>
+        <p class="text-sm leading-relaxed text-kobi-muted" data-i18n="problem.3.desc">
+          International AI tools don't understand bKash integrations, NID verification, or BD business context. Kobi does.
+        </p>
       </div>
     </div>
   </div>
