@@ -155,7 +155,7 @@ import CodeAnimation from "./CodeAnimation";
               </li>
             </ul>
           </div>
-          <!-- SMS phone mockup -->
+          <!-- SMS phone mockup with carousel -->
           <div class="fade-in flex justify-center">
             <div class="w-72 rounded-[2rem] border-2 border-kobi-border bg-[#111] p-3 shadow-2xl">
               <!-- Phone notch -->
@@ -168,35 +168,116 @@ import CodeAnimation from "./CodeAnimation";
                   <div class="text-sm font-semibold text-white">Kobi AI</div>
                   <div class="text-[10px] text-kobi-muted">16XXX</div>
                 </div>
-                <!-- SMS messages -->
-                <div class="p-3 space-y-2.5 min-h-[280px]">
-                  <!-- Conversation 1: Fix my English -->
-                  <div class="flex justify-end">
-                    <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q1">
-                      eng thik koro: i am go market tommorow for buy phone
+                <!-- Carousel container -->
+                <div class="sms-carousel relative overflow-hidden">
+                  <div class="sms-carousel-track flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1: English Fix -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label1">English Fix</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q1">eng thik koro: i am go market tommorow for buy phone</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a1">"I am going to the market tomorrow to buy a phone." ✅ (tip: go → going to, for buy → to buy, tommorow → tomorrow)</div>
+                      </div>
+                    </div>
+                    <!-- Slide 2: Life Advice -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label2">Life Advice</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q2">gf er birthday, 500tk budget, ki korbo bro? 😅</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a2">Top plan 500tk te: 1) Handmade card + chocolate (150tk) 2) Photo collage print (100tk) 3) Rooftop e fairy light date (250tk) 🎉 Budget e beshi value!</div>
+                      </div>
+                    </div>
+                    <!-- Slide 3: CV Help -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label3">CV Help</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q3">amr CV te ki ki likhbo? garments e 3 bochor kaj korsi</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a3">CV te likhen: 1) Production line supervisor, 2) Quality control experience, 3) Team management 50+ workers. Arekta section e skills: sewing machine operation, compliance, deadline management.</div>
+                      </div>
+                    </div>
+                    <!-- Slide 4: Interview Prep -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label4">Interview Prep</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q4">interview e "tell me about yourself" er answer ki hobe?</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a4">Template: "I have [X] years experience in [field]. Currently I [current role]. My key strength is [skill]. I'm looking for [goal]." Practice kore niben, 30 sec er moddhe shesh korun!</div>
+                      </div>
+                    </div>
+                    <!-- Slide 5: Upwork Proposal -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label5">Upwork Proposal</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q5">upwork e react job er jonno proposal likh</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a5">"Hi! I specialize in React with 2+ yrs building SPAs & dashboards. I noticed you need [specific detail from job post]. I've built similar projects including bKash payment UIs. Available to start immediately."</div>
+                      </div>
+                    </div>
+                    <!-- Slide 6: Farming -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label6">Farming</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q6">dhan e poka lagse, ki spray korbo?</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a6">Dhan er stem borer hole: Cartap hydrochloride 4G spray korun (bigha te 3kg). Bikal e spray korun, 10 din por abar. Sesh kore hat-muk dhue felen. Jodi beshi hole, upazila krishi officer er kase jan.</div>
+                      </div>
+                    </div>
+                    <!-- Slide 7: Health -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label7">Health</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q7">matha batha r jor 3 din dhore, ki korbo?</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a7">Paracetamol 500mg 6 ghonta por, beshi pani khan, bisher aram nin. IMPORTANT: 3 din+ jor mane doctor dekhano MUST — dengue/typhoid test korate hobe. Kachher hospital e jan ajkei.</div>
+                      </div>
+                    </div>
+                    <!-- Slide 8: Math Help -->
+                    <div class="sms-slide w-full flex-shrink-0 p-3 space-y-2.5 min-h-[280px]">
+                      <div class="text-center mb-2">
+                        <span class="text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full" data-i18n="demo.sms.label8">Math Help</span>
+                      </div>
+                      <div class="flex justify-end">
+                        <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q8">345 x 27 = koto? step by step dekha</div>
+                      </div>
+                      <div class="flex justify-start">
+                        <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a8">345 × 27 step by step: 345×7=2,415 | 345×20=6,900 | 2,415+6,900 = 9,315. Answer: 9,315 ✅</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="flex justify-start">
-                    <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a1">
-                      "I am going to the market tomorrow to buy a phone." ✅ (tip: go → going to, for buy → to buy, tommorow → tomorrow)
-                    </div>
-                  </div>
-                  <!-- Divider -->
-                  <div class="flex items-center gap-2 py-1">
-                    <div class="h-px flex-1 bg-kobi-border/30"></div>
-                    <span class="text-[9px] text-kobi-muted/50">···</span>
-                    <div class="h-px flex-1 bg-kobi-border/30"></div>
-                  </div>
-                  <!-- Conversation 2: GF birthday surprise -->
-                  <div class="flex justify-end">
-                    <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]" data-i18n="demo.sms.q2">
-                      gf er birthday, 500tk budget, ki korbo bro? 😅
-                    </div>
-                  </div>
-                  <div class="flex justify-start">
-                    <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[85%]" data-i18n="demo.sms.a2">
-                      Top plan 500tk te: 1) Handmade card + chocolate (150tk) 2) Photo collage print (100tk) 3) Rooftop e fairy light date (250tk) 🎉 Budget e beshi value!
-                    </div>
+                  <!-- Dot indicators -->
+                  <div class="sms-dots flex justify-center gap-1.5 py-2 bg-kobi-bg">
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-emerald-400 transition-all" data-slide="0"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="1"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="2"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="3"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="4"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="5"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="6"></button>
+                    <button class="sms-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-slide="7"></button>
                   </div>
                 </div>
               </div>
@@ -439,9 +520,10 @@ import CodeAnimation from "./CodeAnimation";
   </div>
 </section>
 
-<!-- Tab switching script -->
+<!-- Tab switching + SMS carousel script -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // === Tab switching ===
     const tabs = document.querySelectorAll('.demo-tab');
     const panels = document.querySelectorAll('.demo-panel');
 
@@ -468,7 +550,101 @@ import CodeAnimation from "./CodeAnimation";
             panel.classList.remove('active');
           }
         });
+
+        // Reset carousel when switching to SMS tab
+        if (target === 'sms') {
+          currentSlide = 0;
+          goToSlide(0);
+          startAutoSlide();
+        } else {
+          stopAutoSlide();
+        }
       });
     });
+
+    // === SMS Carousel ===
+    const track = document.querySelector('.sms-carousel-track') as HTMLElement;
+    const dots = document.querySelectorAll('.sms-dot');
+    const totalSlides = 8;
+    let currentSlide = 0;
+    let autoSlideInterval: ReturnType<typeof setInterval> | null = null;
+
+    function goToSlide(index: number) {
+      currentSlide = index;
+      if (track) {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-kobi-border');
+          dot.classList.add('bg-emerald-400');
+        } else {
+          dot.classList.remove('bg-emerald-400');
+          dot.classList.add('bg-kobi-border');
+        }
+      });
+    }
+
+    function nextSlide() {
+      goToSlide((currentSlide + 1) % totalSlides);
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
+    }
+
+    // Dot click handlers
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const slideIndex = parseInt((dot as HTMLElement).dataset.slide || '0');
+        goToSlide(slideIndex);
+        startAutoSlide(); // restart timer on manual click
+      });
+    });
+
+    // Pause on hover
+    const carousel = document.querySelector('.sms-carousel');
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stopAutoSlide);
+      carousel.addEventListener('mouseleave', () => {
+        // Only auto-slide if SMS panel is active
+        const smsPanel = document.querySelector('[data-panel="sms"]');
+        if (smsPanel && !smsPanel.classList.contains('hidden')) {
+          startAutoSlide();
+        }
+      });
+    }
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    if (carousel) {
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = (e as TouchEvent).changedTouches[0].screenX;
+        stopAutoSlide();
+      }, { passive: true });
+      carousel.addEventListener('touchend', (e) => {
+        touchEndX = (e as TouchEvent).changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            // Swipe left — next
+            goToSlide((currentSlide + 1) % totalSlides);
+          } else {
+            // Swipe right — prev
+            goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+          }
+        }
+        startAutoSlide();
+      }, { passive: true });
+    }
   });
 </script>
