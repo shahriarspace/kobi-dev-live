@@ -581,37 +581,85 @@ import CodeAnimation from "./CodeAnimation";
               <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-5 py-2.5 text-center text-sm font-semibold text-black transition hover:bg-emerald-400" data-i18n="demo.code.cta1">
                 Install VS Code Extension &rarr;
               </a>
-              <a href="https://chat.kobidev.com" target="_blank" rel="noopener noreferrer" class="rounded-lg border border-kobi-border px-5 py-2.5 text-center text-sm font-semibold text-white transition hover:border-kobi-muted" data-i18n="demo.code.cta2">
-                Open Web Chat
-              </a>
             </div>
           </div>
           <div class="fade-in space-y-6">
             <CodeAnimation client:load />
-            <!-- Mini web chat mockup -->
-            <div class="mx-auto max-w-lg rounded-xl border border-kobi-border bg-kobi-surface overflow-hidden shadow-2xl">
+            <!-- Sliding code examples carousel -->
+            <div class="code-carousel mx-auto max-w-lg rounded-xl border border-kobi-border bg-kobi-surface overflow-hidden shadow-2xl">
               <div class="flex items-center gap-2 px-4 py-2.5 bg-[#111] border-b border-kobi-border">
                 <div class="flex gap-1.5">
                   <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
                   <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
                   <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
                 </div>
-                <span class="text-xs text-kobi-muted ml-2">chat.kobidev.com</span>
+                <span class="code-carousel-filename text-xs text-kobi-muted ml-2">BkashController.php</span>
+                <span class="code-carousel-lang ml-auto text-[9px] font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full">PHP / Laravel</span>
               </div>
-              <div class="p-4 space-y-3">
-                <div class="flex justify-end">
-                  <div class="bg-emerald-600 text-white px-3 py-2 rounded-2xl rounded-br-md text-xs max-w-[80%]">
-                    How do I integrate bKash payment in Laravel?
+              <div class="relative overflow-hidden">
+                <div class="code-carousel-track flex transition-transform duration-500 ease-in-out">
+                  <!-- Slide 1: PHP / Laravel -->
+                  <div class="code-slide w-full flex-shrink-0 p-4 font-mono text-xs leading-relaxed">
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">1</span><span class="text-purple-400">public function</span> <span class="text-yellow-300">createPayment</span><span class="text-white">(Request </span><span class="text-orange-300">$request</span><span class="text-white">) {</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">2</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">$amount</span> <span class="text-white">= </span><span class="text-orange-300">$request</span><span class="text-white">-></span><span class="text-yellow-300">input</span><span class="text-white">(</span><span class="text-emerald-400">'amount'</span><span class="text-white">);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">3</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">$bkash</span> <span class="text-white">= </span><span class="text-purple-400">new</span> <span class="text-yellow-300">BkashGateway</span><span class="text-white">(</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">4</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-yellow-300">config</span><span class="text-white">(</span><span class="text-emerald-400">'bkash.app_key'</span><span class="text-white">)</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">5</span><span class="text-white">&nbsp;&nbsp;);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">6</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-purple-400">return</span> <span class="text-orange-300">$bkash</span><span class="text-white">-></span><span class="text-yellow-300">charge</span><span class="text-white">(</span><span class="text-orange-300">$amount</span><span class="text-white">);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">7</span><span class="text-white">}</span></div>
+                  </div>
+                  <!-- Slide 2: HTML / CSS -->
+                  <div class="code-slide w-full flex-shrink-0 p-4 font-mono text-xs leading-relaxed">
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">1</span><span class="text-gray-500">&lt;!</span><span class="text-purple-400">DOCTYPE html</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">2</span><span class="text-gray-500">&lt;</span><span class="text-red-400">nav</span> <span class="text-yellow-300">class</span><span class="text-white">=</span><span class="text-emerald-400">"navbar"</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">3</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-gray-500">&lt;</span><span class="text-red-400">a</span> <span class="text-yellow-300">href</span><span class="text-white">=</span><span class="text-emerald-400">"/"</span><span class="text-gray-500">&gt;</span><span class="text-white">Kobi Shop</span><span class="text-gray-500">&lt;/</span><span class="text-red-400">a</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">4</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-gray-500">&lt;</span><span class="text-red-400">div</span> <span class="text-yellow-300">class</span><span class="text-white">=</span><span class="text-emerald-400">"nav-links"</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">5</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-gray-500">&lt;</span><span class="text-red-400">a</span> <span class="text-yellow-300">href</span><span class="text-white">=</span><span class="text-emerald-400">"/products"</span><span class="text-gray-500">&gt;</span><span class="text-white">Products</span><span class="text-gray-500">&lt;/</span><span class="text-red-400">a</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">6</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="text-gray-500">&lt;</span><span class="text-red-400">a</span> <span class="text-yellow-300">href</span><span class="text-white">=</span><span class="text-emerald-400">"/cart"</span><span class="text-gray-500">&gt;</span><span class="text-white">Cart</span><span class="text-gray-500">&lt;/</span><span class="text-red-400">a</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">7</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-gray-500">&lt;/</span><span class="text-red-400">div</span><span class="text-gray-500">&gt;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">8</span><span class="text-gray-500">&lt;/</span><span class="text-red-400">nav</span><span class="text-gray-500">&gt;</span></div>
+                  </div>
+                  <!-- Slide 3: Java / Spring Boot -->
+                  <div class="code-slide w-full flex-shrink-0 p-4 font-mono text-xs leading-relaxed">
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">1</span><span class="text-yellow-300">@PostMapping</span><span class="text-white">(</span><span class="text-emerald-400">"/api/orders"</span><span class="text-white">)</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">2</span><span class="text-purple-400">public</span> <span class="text-blue-300">ResponseEntity</span><span class="text-white">&lt;</span><span class="text-blue-300">Order</span><span class="text-white">&gt;</span> <span class="text-yellow-300">create</span><span class="text-white">(</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">3</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-yellow-300">@RequestBody</span> <span class="text-blue-300">OrderDto</span> <span class="text-orange-300">dto</span><span class="text-white">) {</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">4</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-blue-300">Order</span> <span class="text-orange-300">order</span> <span class="text-white">= </span><span class="text-orange-300">orderService</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">5</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;.</span><span class="text-yellow-300">createOrder</span><span class="text-white">(</span><span class="text-orange-300">dto</span><span class="text-white">);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">6</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-purple-400">return</span> <span class="text-blue-300">ResponseEntity</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">7</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;.</span><span class="text-yellow-300">created</span><span class="text-white">(</span><span class="text-orange-300">uri</span><span class="text-white">).</span><span class="text-yellow-300">body</span><span class="text-white">(</span><span class="text-orange-300">order</span><span class="text-white">);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">8</span><span class="text-white">}</span></div>
+                  </div>
+                  <!-- Slide 4: Python / Django -->
+                  <div class="code-slide w-full flex-shrink-0 p-4 font-mono text-xs leading-relaxed">
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">1</span><span class="text-yellow-300">@api_view</span><span class="text-white">([</span><span class="text-emerald-400">'POST'</span><span class="text-white">])</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">2</span><span class="text-purple-400">def</span> <span class="text-yellow-300">send_sms</span><span class="text-white">(</span><span class="text-orange-300">request</span><span class="text-white">):</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">3</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">phone</span> <span class="text-white">= </span><span class="text-orange-300">request</span><span class="text-white">.data[</span><span class="text-emerald-400">'phone'</span><span class="text-white">]</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">4</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">msg</span> <span class="text-white">= </span><span class="text-orange-300">request</span><span class="text-white">.data[</span><span class="text-emerald-400">'message'</span><span class="text-white">]</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">5</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">result</span> <span class="text-white">= </span><span class="text-yellow-300">SSLSmsGateway</span><span class="text-white">()</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">6</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;.</span><span class="text-yellow-300">send</span><span class="text-white">(</span><span class="text-orange-300">phone</span><span class="text-white">, </span><span class="text-orange-300">msg</span><span class="text-white">)</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">7</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-purple-400">return</span> <span class="text-yellow-300">Response</span><span class="text-white">(</span><span class="text-orange-300">result</span><span class="text-white">)</span></div>
+                  </div>
+                  <!-- Slide 5: JavaScript / Express -->
+                  <div class="code-slide w-full flex-shrink-0 p-4 font-mono text-xs leading-relaxed">
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">1</span><span class="text-purple-400">const</span> <span class="text-orange-300">nagad</span> <span class="text-white">= </span><span class="text-yellow-300">require</span><span class="text-white">(</span><span class="text-emerald-400">'nagad-pg'</span><span class="text-white">);</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">2</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">3</span><span class="text-orange-300">app</span><span class="text-white">.</span><span class="text-yellow-300">post</span><span class="text-white">(</span><span class="text-emerald-400">'/pay/nagad'</span><span class="text-white">, </span><span class="text-purple-400">async</span> <span class="text-white">(</span><span class="text-orange-300">req</span><span class="text-white">, </span><span class="text-orange-300">res</span><span class="text-white">) => {</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">4</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-purple-400">const</span> <span class="text-white">{ </span><span class="text-orange-300">amount</span><span class="text-white">, </span><span class="text-orange-300">orderId</span><span class="text-white"> } = </span><span class="text-orange-300">req</span><span class="text-white">.body;</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">5</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-purple-400">const</span> <span class="text-orange-300">url</span> <span class="text-white">= </span><span class="text-purple-400">await</span> <span class="text-orange-300">nagad</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">6</span><span class="text-white">&nbsp;&nbsp;&nbsp;&nbsp;.</span><span class="text-yellow-300">createPayment</span><span class="text-white">({ </span><span class="text-orange-300">amount</span><span class="text-white">, </span><span class="text-orange-300">orderId</span><span class="text-white"> });</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">7</span><span class="text-white">&nbsp;&nbsp;</span><span class="text-orange-300">res</span><span class="text-white">.</span><span class="text-yellow-300">json</span><span class="text-white">({ </span><span class="text-orange-300">paymentUrl</span><span class="text-white">: </span><span class="text-orange-300">url</span><span class="text-white"> });</span></div>
+                    <div class="flex"><span class="mr-3 select-none text-kobi-muted/50 w-4 text-right">8</span><span class="text-white">});</span></div>
                   </div>
                 </div>
-                <div class="flex justify-start">
-                  <div class="bg-[#1a1a1a] border border-kobi-border px-3 py-2 rounded-2xl rounded-bl-md text-xs text-kobi-text max-w-[80%]">
-                    <div class="bg-[#111] rounded-lg p-2 font-mono text-[10px] text-emerald-400">
-                      Route::post(<span class="text-amber-400">'/bkash/pay'</span>,<br>
-                      &nbsp;&nbsp;[BkashController::class, <span class="text-amber-400">'create'</span>]);
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <!-- Dot indicators -->
+              <div class="code-dots flex justify-center gap-1.5 py-2 bg-[#111] border-t border-kobi-border">
+                <button class="code-dot w-1.5 h-1.5 rounded-full bg-emerald-400 transition-all" data-codeslide="0"></button>
+                <button class="code-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-codeslide="1"></button>
+                <button class="code-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-codeslide="2"></button>
+                <button class="code-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-codeslide="3"></button>
+                <button class="code-dot w-1.5 h-1.5 rounded-full bg-kobi-border transition-all" data-codeslide="4"></button>
               </div>
             </div>
           </div>
@@ -755,5 +803,110 @@ import CodeAnimation from "./CodeAnimation";
         startAutoSlide();
       }, { passive: true });
     }
+
+    // === Code Examples Carousel ===
+    const codeTrack = document.querySelector('.code-carousel-track') as HTMLElement;
+    const codeDots = document.querySelectorAll('.code-dot');
+    const codeFilename = document.querySelector('.code-carousel-filename') as HTMLElement;
+    const codeLang = document.querySelector('.code-carousel-lang') as HTMLElement;
+    const codeSlideData = [
+      { filename: 'BkashController.php', lang: 'PHP / Laravel' },
+      { filename: 'index.html', lang: 'HTML / CSS' },
+      { filename: 'OrderController.java', lang: 'Java / Spring' },
+      { filename: 'views.py', lang: 'Python / Django' },
+      { filename: 'payment.js', lang: 'JavaScript / Express' },
+    ];
+    const totalCodeSlides = 5;
+    let currentCodeSlide = 0;
+    let codeAutoInterval: ReturnType<typeof setInterval> | null = null;
+
+    function goToCodeSlide(index: number) {
+      currentCodeSlide = index;
+      if (codeTrack) {
+        codeTrack.style.transform = `translateX(-${index * 100}%)`;
+      }
+      if (codeFilename) codeFilename.textContent = codeSlideData[index].filename;
+      if (codeLang) codeLang.textContent = codeSlideData[index].lang;
+      codeDots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove('bg-kobi-border');
+          dot.classList.add('bg-emerald-400');
+        } else {
+          dot.classList.remove('bg-emerald-400');
+          dot.classList.add('bg-kobi-border');
+        }
+      });
+    }
+
+    function nextCodeSlide() {
+      goToCodeSlide((currentCodeSlide + 1) % totalCodeSlides);
+    }
+
+    function startCodeAutoSlide() {
+      stopCodeAutoSlide();
+      codeAutoInterval = setInterval(nextCodeSlide, 4000);
+    }
+
+    function stopCodeAutoSlide() {
+      if (codeAutoInterval) {
+        clearInterval(codeAutoInterval);
+        codeAutoInterval = null;
+      }
+    }
+
+    // Code dot click handlers
+    codeDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const slideIndex = parseInt((dot as HTMLElement).dataset.codeslide || '0');
+        goToCodeSlide(slideIndex);
+        startCodeAutoSlide();
+      });
+    });
+
+    // Pause on hover
+    const codeCarousel = document.querySelector('.code-carousel');
+    if (codeCarousel) {
+      codeCarousel.addEventListener('mouseenter', stopCodeAutoSlide);
+      codeCarousel.addEventListener('mouseleave', () => {
+        const codePanel = document.querySelector('[data-panel="code"]');
+        if (codePanel && !codePanel.classList.contains('hidden')) {
+          startCodeAutoSlide();
+        }
+      });
+
+      // Touch/swipe support
+      let codeTouchStartX = 0;
+      codeCarousel.addEventListener('touchstart', (e) => {
+        codeTouchStartX = (e as TouchEvent).changedTouches[0].screenX;
+        stopCodeAutoSlide();
+      }, { passive: true });
+      codeCarousel.addEventListener('touchend', (e) => {
+        const codeTouchEndX = (e as TouchEvent).changedTouches[0].screenX;
+        const diff = codeTouchStartX - codeTouchEndX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) {
+            goToCodeSlide((currentCodeSlide + 1) % totalCodeSlides);
+          } else {
+            goToCodeSlide((currentCodeSlide - 1 + totalCodeSlides) % totalCodeSlides);
+          }
+        }
+        startCodeAutoSlide();
+      }, { passive: true });
+    }
+
+    // Start/stop code carousel when tab switches
+    // Update the tab switching to also handle code carousel
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = (tab as HTMLElement).dataset.tab;
+        if (target === 'code') {
+          currentCodeSlide = 0;
+          goToCodeSlide(0);
+          startCodeAutoSlide();
+        } else {
+          stopCodeAutoSlide();
+        }
+      });
+    });
   });
 </script>
