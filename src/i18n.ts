@@ -18,6 +18,11 @@ export const translations = {
     "hero.stat.2": "1 Credit = ৳1",
     "hero.stat.3": "bKash / Nagad",
     "hero.stat.4": "Powered by Claude",
+    "hero.soon": "Coming Soon",
+    "hero.sms.q": "bKash e ki recharge kora jay?",
+    "hero.sms.a": "Ha! App e \"Recharge\" e jan...",
+    "hero.interview.q": "What is useEffect?",
+    "hero.freelance.label": "AI Proposal",
 
     // Code animation
     "code.suggesting": "Kobi is suggesting...",
@@ -321,6 +326,11 @@ export const translations = {
     "hero.stat.2": "১ ক্রেডিট = ৳১",
     "hero.stat.3": "বিকাশ / নগদ",
     "hero.stat.4": "Claude দিয়ে চলে",
+    "hero.soon": "শীঘ্রই আসছে",
+    "hero.sms.q": "bKash এ কি রিচার্জ করা যায়?",
+    "hero.sms.a": "হ্যাঁ! অ্যাপে \"Recharge\" এ যান...",
+    "hero.interview.q": "useEffect কী?",
+    "hero.freelance.label": "AI প্রপোজাল",
 
     // Code animation
     "code.suggesting": "কবি সাজেস্ট করছে...",
