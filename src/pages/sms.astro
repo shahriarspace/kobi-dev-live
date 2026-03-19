@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi SMS — AI Assistant via SMS | No Internet Needed | Bangladesh"
+  description="SMS pathiye AI er help nin. Internet chhara AI use korun. CV help, English correction, interview tips — shob SMS e. 2 credit per message. Bangladesh er first SMS AI."
+  keywords="SMS AI Bangladesh, AI SMS service, SMS diye AI, internet chhara AI, AI without internet, SMS AI assistant Bangladesh, Kobi SMS, SMS CV help, SMS English correction, SMS interview tips, AI for feature phone, basic phone AI, গ্রামীণ AI, SMS এআই, ইন্টারনেট ছাড়া AI, মোবাইলে AI, ফিচার ফোন AI, SMS দিয়ে CV, বাংলিশ AI SMS"
+  path="/sms"
+>
+  <Navbar />
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          Internet lagbe na
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          SMS pathao, <span class="text-emerald-500">AI reply pao</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          Kobi SMS — Bangladesh er first AI assistant via SMS. Jevabe SMS pathao, sevabe AI er help nin. CV banano, English thik kora, interview prep — shob SMS e possible.
+        </p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+            Start free &rarr;
+          </a>
+          <a href="/#pricing" class="rounded-lg border border-kobi-border px-8 py-3 font-semibold text-white transition hover:border-kobi-muted hover:bg-kobi-surface">
+            See pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Kivabe kaj kore?</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">📱</div>
+            <h3 class="mb-2 text-lg font-bold text-white">1. SMS pathao</h3>
+            <p class="text-sm text-kobi-muted">Kobi er number e SMS pathao. Banglish e likho — "cv help koro" ba "thik koro: i am go market"</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">🤖</div>
+            <h3 class="mb-2 text-lg font-bold text-white">2. AI process kore</h3>
+            <p class="text-sm text-kobi-muted">Claude Haiku AI tomar message bujhe, context dhore reply toiri kore. 15 second er moddhe.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">✅</div>
+            <h3 class="mb-2 text-lg font-bold text-white">3. Reply pao</h3>
+            <p class="text-sm text-kobi-muted">AI reply SMS e chole ashe. Short, useful, Banglish e — jekono phone e kaj kore.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases -->
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Ki ki korte parbe?</h2>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">CV Help</h3>
+            <div class="space-y-2 font-mono text-sm">
+              <p class="text-kobi-muted"><span class="text-white">You:</span> cv help koro, web dev, 3 bochor exp</p>
+              <p class="text-kobi-muted"><span class="text-emerald-400">Kobi:</span> CV er jnno: 1. Name? 2. Skills? 3. Last job? R help?</p>
+            </div>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">English Correction</h3>
+            <div class="space-y-2 font-mono text-sm">
+              <p class="text-kobi-muted"><span class="text-white">You:</span> thik koro: i am go market yesterday</p>
+              <p class="text-kobi-muted"><span class="text-emerald-400">Kobi:</span> Fix: 'I went to market yesterday' Keno: past = went, not go. R help?</p>
+            </div>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Interview Prep</h3>
+            <div class="space-y-2 font-mono text-sm">
+              <p class="text-kobi-muted"><span class="text-white">You:</span> software eng interview Q dao</p>
+              <p class="text-kobi-muted"><span class="text-emerald-400">Kobi:</span> Top 3 Q: 1. Array r LinkedList difference? 2. REST API explain koro 3. Git merge r rebase? R help?</p>
+            </div>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">General Help</h3>
+            <div class="space-y-2 font-mono text-sm">
+              <p class="text-kobi-muted"><span class="text-white">You:</span> react e state management kivabe kore?</p>
+              <p class="text-kobi-muted"><span class="text-emerald-400">Kobi:</span> useState simple er jnno, useReducer complex er jnno. Large app e Zustand/Redux use koro. R help?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-500">2</div>
+            <div class="mt-1 text-sm text-kobi-muted">Credits per SMS</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-500">&lt;15s</div>
+            <div class="mt-1 text-sm text-kobi-muted">Response time</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-500">300</div>
+            <div class="mt-1 text-sm text-kobi-muted">Max chars per reply</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-emerald-500">0</div>
+            <div class="mt-1 text-sm text-kobi-muted">Internet needed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

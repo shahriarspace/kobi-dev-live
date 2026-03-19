@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi Freelance — AI Proposal Writer | Upwork & Fiverr | Bangladesh"
+  description="AI diye Upwork, Fiverr, Freelancer.com er jonno winning proposal likho. Client er job post analyze kore tailored proposal generate kore. 5 credit per proposal. Bangladeshi freelancer der jonno."
+  keywords="Upwork proposal writer, Fiverr proposal AI, freelance proposal Bangladesh, Upwork Bangladesh, Fiverr Bangladesh, freelancer proposal template, proposal lekha, AI proposal writer, Upwork cover letter, Fiverr gig description, freelancing Bangladesh, ফ্রিল্যান্সিং বাংলাদেশ, Upwork proposal bangla, আপওয়ার্ক প্রোপোজাল, ফাইভার, ফ্রিল্যান্সার প্রোপোজাল, proposal template bangla, winning proposal tips, client er reply paowa, Upwork profile optimization, Upwork success rate, freelancing tips Bangladesh, online income Bangladesh, ঘরে বসে আয়, অনলাইন আয়"
+  path="/freelance"
+>
+  <Navbar />
+  <main>
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          AI Proposal Writer
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          Winning proposals <span class="text-emerald-500">seconds e</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          Client er job post paste koro, Kobi AI tailored proposal generate kore. Upwork, Fiverr, Freelancer.com — shob platform e kaj kore. More replies, more clients.
+        </p>
+        <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+          Proposal likho free &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Kivabe kore?</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">📋</div>
+            <h3 class="mb-2 text-lg font-bold text-white">1. Job post paste koro</h3>
+            <p class="text-sm text-kobi-muted">Client er Upwork/Fiverr job description copy kore paste koro.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">🤖</div>
+            <h3 class="mb-2 text-lg font-bold text-white">2. AI analyze kore</h3>
+            <p class="text-sm text-kobi-muted">AI job requirements bujhe, tomar skills match kore, tailored proposal toiri kore.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">🚀</div>
+            <h3 class="mb-2 text-lg font-bold text-white">3. Submit koro</h3>
+            <p class="text-sm text-kobi-muted">Copy kore Upwork e submit koro. Customize korte parbe. More replies guaranteed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-8 text-center text-3xl font-bold text-white">Supported Platforms</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <h3 class="mb-2 text-xl font-bold text-white">Upwork</h3>
+            <p class="text-sm text-kobi-muted">Cover letter + proposal. Client er requirements match kore personalized.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <h3 class="mb-2 text-xl font-bold text-white">Fiverr</h3>
+            <p class="text-sm text-kobi-muted">Gig description + buyer request responses. SEO-optimized gig titles.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <h3 class="mb-2 text-xl font-bold text-white">Freelancer.com</h3>
+            <p class="text-sm text-kobi-muted">Bid proposals. Budget justification + timeline included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

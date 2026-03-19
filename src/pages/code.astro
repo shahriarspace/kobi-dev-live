@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi Code — AI Coding Assistant for VS Code | Bangladesh"
+  description="VS Code e AI coding assistant. Code completion, chat, agent mode. Claude AI diye chole. Copilot er alternative — BDT te pay koro bKash e. Bangladeshi developer der jonno."
+  keywords="AI coding assistant, VS Code AI extension, Copilot alternative Bangladesh, AI code completion, code suggestion AI, Claude AI coding, AI pair programmer, coding help Bangladesh, VS Code extension Bangladesh, কোডিং সাহায্য, AI কোডিং, VS Code AI, GitHub Copilot alternative BDT, AI autocomplete, code generation AI, React code AI, Python code AI, Node.js AI coding, PHP AI help, Java code AI, web development AI, AI debugging, code review AI, software development Bangladesh, developer tools BD, কোড লেখা AI, প্রোগ্রামিং সাহায্য, BDT coding tool, taka te Copilot"
+  path="/code"
+>
+  <Navbar />
+  <main>
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          VS Code AI Extension
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          Code faster with <span class="text-emerald-500">AI</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          VS Code e AI code completion, inline chat, agent mode. Claude Sonnet o Haiku diye chole. Copilot er moto — but BDT te pay koro, bKash e. International card lagbe na.
+        </p>
+        <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+            Start coding free &rarr;
+          </a>
+          <a href="https://marketplace.visualstudio.com" class="rounded-lg border border-kobi-border px-8 py-3 font-semibold text-white transition hover:border-kobi-muted hover:bg-kobi-surface">
+            VS Code Extension
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Features</h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Code Completion</h3>
+            <p class="text-sm text-kobi-muted">Type korte korte AI suggestion dey. Tab press koro, code insert hoy. Claude Haiku — fast, accurate.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Inline Chat</h3>
+            <p class="text-sm text-kobi-muted">Code select koro, question koro. "Eta ki kore?", "Bug ta fix koro", "Test likho" — soja answer.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Chat Panel</h3>
+            <p class="text-sm text-kobi-muted">VS Code er side panel e chat koro AI er sathe. Code explain, debug help, architecture questions.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Multi-language Support</h3>
+            <p class="text-sm text-kobi-muted">JavaScript, TypeScript, Python, PHP, Java, Go, Rust, C++ — shob language e kaj kore.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-8 text-center text-3xl font-bold text-white">Copilot vs Kobi Code</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead>
+              <tr class="border-b border-kobi-border">
+                <th class="py-3 pr-4 text-kobi-muted">Feature</th>
+                <th class="py-3 px-4 text-kobi-muted">GitHub Copilot</th>
+                <th class="py-3 pl-4 text-emerald-400">Kobi Code</th>
+              </tr>
+            </thead>
+            <tbody class="text-kobi-muted">
+              <tr class="border-b border-kobi-border/50">
+                <td class="py-3 pr-4 text-white">Price</td>
+                <td class="py-3 px-4">$10/month (USD only)</td>
+                <td class="py-3 pl-4 text-emerald-400">৳150/month (bKash)</td>
+              </tr>
+              <tr class="border-b border-kobi-border/50">
+                <td class="py-3 pr-4 text-white">Payment</td>
+                <td class="py-3 px-4">International card required</td>
+                <td class="py-3 pl-4 text-emerald-400">bKash / Nagad</td>
+              </tr>
+              <tr class="border-b border-kobi-border/50">
+                <td class="py-3 pr-4 text-white">AI Model</td>
+                <td class="py-3 px-4">GPT-4o</td>
+                <td class="py-3 pl-4 text-emerald-400">Claude Sonnet + Haiku</td>
+              </tr>
+              <tr class="border-b border-kobi-border/50">
+                <td class="py-3 pr-4 text-white">Code Completion</td>
+                <td class="py-3 px-4">Yes</td>
+                <td class="py-3 pl-4 text-emerald-400">Yes</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4 text-white">Other tools (CV, SMS, Interview)</td>
+                <td class="py-3 px-4">No</td>
+                <td class="py-3 pl-4 text-emerald-400">Yes — same credits</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

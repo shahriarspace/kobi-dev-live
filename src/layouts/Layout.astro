@@ -4,12 +4,21 @@ import { translations } from "../i18n";
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  path?: string;
 }
 
 const {
   title,
-  description = "বাংলাদেশি পেশাদারদের জন্য AI প্ল্যাটফর্ম। কোড, SMS, CV, ইন্টারভিউ, ফ্রিল্যান্স — সবকিছুতে AI। Anthropic Claude দিয়ে চলে। বিকাশে টাকায় পে করুন। মাত্র ৳১৫০/মাস থেকে।",
+  description = "বাংলাদেশের AI প্ল্যাটফর্ম। কোড, চ্যাট, SMS, CV, ইন্টারভিউ, ফ্রিল্যান্স — সবকিছুতে AI। সবার জন্য AI। বিকাশে টাকায় পে করুন। মাত্র ৳১৫০/মাস থেকে।",
+  keywords = "",
+  path = "/",
 } = Astro.props;
+
+const baseUrl = "https://kobidev.com";
+const canonicalUrl = `${baseUrl}${path}`;
+const defaultKeywords = "AI Bangladesh, AI tool Bangladesh, AI assistant Bangla, AI coding tool, AI SMS Bangladesh, AI CV maker Bangladesh, AI interview preparation, AI freelance proposal writer, কবি AI, বাংলাদেশ AI, ChatGPT alternative Bangladesh, Claude AI Bangladesh, BDT AI tool, bKash payment AI, Bangladeshi AI platform, AI for developers Bangladesh, VS Code AI extension, AI code completion, Copilot alternative Bangladesh, free AI tool Bangladesh, cheap AI tool, AI tool taka, AI tool BDT price, SMS AI assistant, AI diye CV banano, interview practice AI, Upwork proposal AI, Fiverr proposal writer AI, freelancer help AI, Banglish AI, AI bangla english, coding help Bangladesh, software developer tools BD, web developer AI Bangladesh, AI shikha, AI help bangla, কোডিং সাহায্য, সিভি তৈরি, ইন্টারভিউ প্রস্তুতি, ফ্রিল্যান্সিং সাহায্য, এআই টুল বাংলাদেশ, এআই কোডিং, ফ্রি এআই, বিকাশ পেমেন্ট, ঢাকা AI tool, programmer tools Bangladesh, React developer AI, Python AI help, Node.js AI assistant, mobile theke AI, phone AI SMS, AI without internet Bangladesh, kobi, kobidev, kobi ai, kobi dev";
+const allKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 ---
 
 <!doctype html>
@@ -20,14 +29,23 @@ const {
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="AI platform, Bangladesh, BDT, bKash, কোডিং, AI, বাংলাদেশ, VS Code, SMS AI, CV builder, interview coach, freelance proposal, কবি"
+      content={allKeywords}
     />
     <meta name="author" content="Kobi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- hreflang: bilingual Bengali + English -->
+    <link rel="alternate" hreflang="bn" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
     <meta name="google-site-verification" content="xwZVlGH--ahwzCkJKSRHERvuIPYEYT8Yzka5oPPgbJw" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kobidev.com/" />
+    <meta property="og:site_name" content="Kobi" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://kobidev.com/og-image.png" />
@@ -38,6 +56,7 @@ const {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://kobidev.com/og-image.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
@@ -58,7 +77,7 @@ const {
         "name": "Kobi",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Windows, macOS, Linux, Web, SMS",
-        "description": "AI platform for Bangladeshi professionals. Code, SMS, CV, Interview, Freelance tools. Pay in BDT via bKash.",
+        "description": "The AI platform of Bangladesh. Code, Chat, SMS, CV, Interview, Freelance tools — AI for everyone. Pay in BDT via bKash.",
         "offers": [
           {
             "@type": "Offer",

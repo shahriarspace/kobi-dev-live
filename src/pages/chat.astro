@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi Chat — AI Chat in Bangla & English | ChatGPT Alternative Bangladesh"
+  description="AI chat Bangla o English e. ChatGPT er moto — but BDT te pay koro bKash e. Claude AI diye powered. Coding help, writing, general knowledge — shob kichu."
+  keywords="AI chat Bangladesh, ChatGPT alternative Bangladesh, AI chat bangla, Claude chat Bangladesh, AI chatbot bangla, bangla AI, ChatGPT bangla, AI chat BDT, chat AI bKash, বাংলা চ্যাট AI, এআই চ্যাটবট, ChatGPT বিকল্প, AI কথোপকথন, চ্যাটজিপিটি বাংলাদেশ, free AI chat, AI assistant bangla, AI help bangla, coding chat AI, AI web chat, Kobi chat"
+  path="/chat"
+>
+  <Navbar />
+  <main>
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          AI Chat
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          AI er sathe <span class="text-emerald-500">kotha bolo</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          ChatGPT er moto AI chat — but Bangladeshi der jonno. bKash e pay koro, Bangla o English duitai bujhe. Coding help, writing, learning — shob kichu one place e.
+        </p>
+        <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+          Chat shuru koro free &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Ki ki korte parbe?</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Coding Help</h3>
+            <p class="text-sm text-kobi-muted">Code explain koro, debug koro, new feature er plan koro. React, Python, Node — shob language.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Writing</h3>
+            <p class="text-sm text-kobi-muted">Email, article, blog post, assignment — professional English e likhe dey.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Learning</h3>
+            <p class="text-sm text-kobi-muted">New concept shikhte chao? AI Banglish e explain kore — easy to understand.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Translation</h3>
+            <p class="text-sm text-kobi-muted">Bangla to English, English to Bangla — natural translation, not Google Translate style.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Research</h3>
+            <p class="text-sm text-kobi-muted">Topic niye deep dive koro. AI context dhore follow-up questions er answer dey.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-2 font-bold text-emerald-400">Math & Logic</h3>
+            <p class="text-sm text-kobi-muted">Math problem solve koro, logic build koro. Step by step explanation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <h2 class="mb-6 text-3xl font-bold text-white">ChatGPT vs Kobi Chat</h2>
+        <p class="mx-auto mb-8 max-w-2xl text-kobi-muted">ChatGPT Plus costs $20/month — international card lagbe. Kobi Chat starts at ৳150/month, bKash e pay koro. Same quality AI (Claude), Bangladeshi der jonno optimized.</p>
+        <a href="/#pricing" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+          Pricing dekho &rarr;
+        </a>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

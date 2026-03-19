@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi Interview — AI Interview Coach Bangladesh | Practice & Prepare"
+  description="AI interview coach diye interview preparation koro. Software engineer, web developer, data analyst — shob role er jonno. Mock interview, common questions, feedback. 10 credit per session."
+  keywords="interview preparation Bangladesh, AI interview coach, mock interview AI, software engineer interview Bangladesh, web developer interview questions bangla, interview tips Bangladesh, interview practice AI, coding interview prep, FAANG interview Bangladesh, ইন্টারভিউ প্রস্তুতি, ইন্টারভিউ প্র্যাকটিস, interview question answer bangla, HR interview tips, technical interview Bangladesh, system design interview, React interview questions, Node.js interview, Python interview Bangladesh, job interview help, চাকরির ইন্টারভিউ, ইন্টারভিউ কোচ"
+  path="/interview"
+>
+  <Navbar />
+  <main>
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          AI Interview Coach
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          Interview e <span class="text-emerald-500">confident hao</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          AI coach tomar role er jonno interview questions generate kore, tomar answers review kore, feedback dey. Software eng, web dev, data analyst — shob role er jonno.
+        </p>
+        <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+          Practice shuru koro &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Ki ki pabe?</h2>
+        <div class="grid gap-8 md:grid-cols-2">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Technical Questions</h3>
+            <p class="text-sm text-kobi-muted mb-4">Tomar role o tech stack onujayi questions generate kore:</p>
+            <ul class="space-y-2 text-sm text-kobi-muted">
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Data Structures & Algorithms</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> System Design</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Framework-specific (React, Node, Django)</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Database & SQL questions</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Behavioral Questions</h3>
+            <p class="text-sm text-kobi-muted mb-4">HR round er jonno preparation:</p>
+            <ul class="space-y-2 text-sm text-kobi-muted">
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> "Tell me about yourself" — structured answer</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Strength/weakness framing</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Conflict resolution scenarios</li>
+              <li class="flex items-start gap-2"><span class="text-emerald-500">&#10003;</span> Salary negotiation tips</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Answer Review</h3>
+            <p class="text-sm text-kobi-muted">Tomar answer likho, AI review kore feedback dey — ki bhalo, ki improve korte hobe, ki missing.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6">
+            <h3 class="mb-3 text-lg font-bold text-emerald-400">Role-Specific Prep</h3>
+            <p class="text-sm text-kobi-muted">Junior dev, senior eng, tech lead, DevOps — each role er jonno different preparation strategy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

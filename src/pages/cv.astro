@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Pricing from "../components/Pricing.astro";
+import "../styles/global.css";
+---
+
+<Layout
+  title="Kobi CV — AI CV Maker Bangladesh | Professional CV Bangla & English"
+  description="AI diye professional CV banao minutes e. Bangla o English CV. Web developer, software engineer, freelancer — shobai er jnno. bKash e pay korun. 5 credit per CV."
+  keywords="CV maker Bangladesh, AI CV builder, CV bangla, CV English, professional CV Bangladesh, resume maker AI, CV template Bangladesh, ফ্রি সিভি, সিভি তৈরি, AI সিভি, CV banano, resume banano, CV format Bangladesh, fresher CV Bangladesh, experienced CV template, web developer CV, software engineer CV Bangladesh, freelancer CV, Upwork profile CV, Fiverr profile help, CV lekha, CV writing service Bangladesh, সিভি মেকার"
+  path="/cv"
+>
+  <Navbar />
+  <main>
+    <section class="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent"></div>
+      <div class="mx-auto max-w-4xl px-4 text-center">
+        <div class="mb-4 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm text-emerald-400">
+          AI-powered CV
+        </div>
+        <h1 class="mb-6 text-4xl font-black leading-tight text-white md:text-5xl lg:text-6xl">
+          Professional CV <span class="text-emerald-500">minutes e</span>
+        </h1>
+        <p class="mx-auto mb-8 max-w-2xl text-lg text-kobi-muted md:text-xl">
+          Tomar experience bolo, Kobi AI professional CV toiri kore debe. Bangla o English duitai support kore. Web dev, software eng, freelancer — shobai er jonno.
+        </p>
+        <a href="https://app.kobidev.com/signup" class="rounded-lg bg-emerald-500 px-8 py-3 font-semibold text-black transition hover:bg-emerald-400">
+          CV banao free &rarr;
+        </a>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">Kivabe kaj kore?</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">💬</div>
+            <h3 class="mb-2 text-lg font-bold text-white">1. Experience bolo</h3>
+            <p class="text-sm text-kobi-muted">Tomar skills, experience, education — Banglish e likho. AI bujhe nibe.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">🤖</div>
+            <h3 class="mb-2 text-lg font-bold text-white">2. AI CV toiri kore</h3>
+            <p class="text-sm text-kobi-muted">Professional format e CV generate hoy — proper sections, action verbs, clean layout.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-6 text-center">
+            <div class="mb-4 text-4xl">📄</div>
+            <h3 class="mb-2 text-lg font-bold text-white">3. Download koro</h3>
+            <p class="text-sm text-kobi-muted">PDF e download koro, Upwork/Fiverr/LinkedIn e use koro. Done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-kobi-border py-20">
+      <div class="mx-auto max-w-4xl px-4">
+        <h2 class="mb-8 text-center text-3xl font-bold text-white">Ke ke use korte parbe?</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Web Developers</h3>
+            <p class="text-sm text-kobi-muted">React, Node.js, PHP — tomar tech stack highlight kore professional CV.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Freshers</h3>
+            <p class="text-sm text-kobi-muted">First job er jonno CV lage? AI projects o skills ke highlight korbe.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Freelancers</h3>
+            <p class="text-sm text-kobi-muted">Upwork/Fiverr profile er jonno optimized CV. Client attract korar jonno.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Software Engineers</h3>
+            <p class="text-sm text-kobi-muted">FAANG-style CV format. System design, DSA projects highlight kore.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Managers</h3>
+            <p class="text-sm text-kobi-muted">Leadership experience, team size, KPIs — properly formatted.</p>
+          </div>
+          <div class="rounded-xl border border-kobi-border bg-kobi-surface p-5">
+            <h3 class="mb-2 font-bold text-emerald-400">Career Changers</h3>
+            <p class="text-sm text-kobi-muted">Different field e jachho? Transferable skills highlight kore CV.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Pricing />
+  </main>
+  <Footer />
+</Layout>

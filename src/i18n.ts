@@ -7,10 +7,10 @@ export const translations = {
     "nav.cta": "Get started free",
 
     // Hero
-    "hero.badge": "AI platform for Bangladesh",
-    "hero.title.1": "AI for every",
-    "hero.title.2": "Bangladeshi ",
-    "hero.title.accent": "professional",
+    "hero.badge": "AI for everyone",
+    "hero.title.1": "The AI platform",
+    "hero.title.2": "of ",
+    "hero.title.accent": "Bangladesh",
     "hero.description": "Code, communicate, prepare, build — all with AI. Pay in BDT via bKash. No international card needed. One credit wallet for everything.",
     "hero.cta.primary": "Start free →",
     "hero.cta.secondary": "See pricing",
@@ -335,7 +335,7 @@ export const translations = {
     "social.stat4.label": "Starting price per month",
 
     // Footer
-    "footer.tagline": "AI for every Bangladeshi professional",
+    "footer.tagline": "The AI platform of Bangladesh",
     "footer.products": "Products",
     "footer.company": "Company",
     "footer.login": "Login",
@@ -357,10 +357,10 @@ export const translations = {
     "nav.cta": "ফ্রিতে শুরু করুন",
 
     // Hero
-    "hero.badge": "বাংলাদেশের জন্য AI প্ল্যাটফর্ম",
-    "hero.title.1": "প্রতিটি বাংলাদেশি",
+    "hero.badge": "সবার জন্য AI",
+    "hero.title.1": "বাংলাদেশের",
     "hero.title.2": "",
-    "hero.title.accent": "পেশাদারের জন্য AI",
+    "hero.title.accent": "AI প্ল্যাটফর্ম",
     "hero.description": "কোড, যোগাযোগ, প্রস্তুতি, ফ্রিল্যান্সিং — সবকিছুতে AI। বিকাশে টাকায় পে করুন। ইন্টারন্যাশনাল কার্ড লাগবে না। এক ক্রেডিট ওয়ালেট সব অ্যাপে চলবে।",
     "hero.cta.primary": "ফ্রিতে শুরু করুন →",
     "hero.cta.secondary": "প্যাকেজ দেখুন",
@@ -685,7 +685,7 @@ export const translations = {
     "social.stat4.label": "মাসিক শুরুর দাম",
 
     // Footer
-    "footer.tagline": "প্রতিটি বাংলাদেশি পেশাদারের জন্য AI",
+    "footer.tagline": "বাংলাদেশের AI প্ল্যাটফর্ম",
     "footer.products": "প্রোডাক্ট",
     "footer.company": "কোম্পানি",
     "footer.login": "লগইন",
