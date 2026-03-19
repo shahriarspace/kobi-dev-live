@@ -1,0 +1,83 @@
+---
+import Layout from "./Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  updated?: Date;
+  author: string;
+  tags: string[];
+  keywords?: string;
+}
+
+const { title, description, date, updated, author, tags, keywords } = Astro.props;
+const formattedDate = date.toLocaleDateString("en-GB", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+const formattedUpdated = updated
+  ? updated.toLocaleDateString("en-GB", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  : null;
+---
+
+<Layout
+  title={`${title} — Kobi Blog`}
+  description={description}
+  keywords={keywords}
+  path={`/blog/${Astro.params.slug}`}
+>
+  <Navbar />
+  <main>
+    <article class="mx-auto max-w-3xl px-4 pt-32 pb-20 md:pt-40">
+      <header class="mb-10">
+        <div class="mb-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs text-emerald-400">
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h1 class="mb-4 text-3xl font-black leading-tight text-white md:text-4xl lg:text-5xl">
+          {title}
+        </h1>
+        <p class="mb-4 text-lg text-kobi-muted">{description}</p>
+        <div class="flex items-center gap-4 text-sm text-kobi-muted">
+          <span>{author}</span>
+          <span>&middot;</span>
+          <time datetime={date.toISOString()}>{formattedDate}</time>
+          {formattedUpdated && (
+            <>
+              <span>&middot;</span>
+              <span>Updated {formattedUpdated}</span>
+            </>
+          )}
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-emerald max-w-none
+        prose-headings:font-bold prose-headings:text-white
+        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+        prose-p:text-kobi-muted prose-p:leading-relaxed
+        prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-white
+        prose-code:text-emerald-300 prose-code:bg-kobi-surface prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+        prose-pre:bg-kobi-surface prose-pre:border prose-pre:border-kobi-border
+        prose-blockquote:border-emerald-500/50
+        prose-li:text-kobi-muted
+        prose-img:rounded-xl prose-img:border prose-img:border-kobi-border">
+        <slot />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</Layout>
